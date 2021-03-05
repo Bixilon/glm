@@ -1,3 +1,8 @@
 rootProject.name = "glm"
 
-include("bom")
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven("https://repo.repsy.io/mvn/elect/kx")
+    }
+}

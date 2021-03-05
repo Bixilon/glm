@@ -1,4 +1,4 @@
-module com.github.kotlin_graphics.glm {
+module com.github.kotlin.graphics.glm {
 
     requires kotlin.stdlib;
 
@@ -7,8 +7,8 @@ module com.github.kotlin_graphics.glm {
 //    requires com.github.kotlin_graphics.kool;
 
     requires java.desktop;
-    requires com.github.kotlin_graphics.kotlin_unsigned;
-    requires com.github.kotlin_graphics.kool;
+    requires com.github.kotlin.graphics.unsigned;
+    requires com.github.kotlin.graphics.kool;
 
     exports glm_;
     exports glm_.detail;
