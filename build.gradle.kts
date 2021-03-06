@@ -1,8 +1,10 @@
 import kx.LwjglModules.*
+import kx.KxProject.*
+import kx.kxImplementation
 import kx.lwjglImplementation
 
 plugins {
-    val build = "0.4.0"
+    val build = "0.5.5"
     id("kx.kotlin.11") version build
     id("kx.lwjgl") version build
     id("kx.dokka") version build
@@ -11,6 +13,7 @@ plugins {
 }
 
 group = "com.github.kotlin.graphics"
+version = "0.9.9.1-4"
 
 repositories {
     maven("https://repo.repsy.io/mvn/elect/kx")
@@ -19,13 +22,7 @@ repositories {
 
 dependencies {
 
-    implementation(platform("kx.platform:source:0.0.4"))
-
-    val kx = "com.github.kotlin-graphics"
-    implementation("$kx:kotlin-unsigned:14a46b97")
-    implementation("$kx:kool:52895c39")
-
-//    implementation("kx.platform:source:0.0.3")
+    kxImplementation(unsigned, kool)
 
     lwjglImplementation(glfw, jemalloc, openal, opengl, stb)
 }
