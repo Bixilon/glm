@@ -27,15 +27,30 @@ import de.bixilon.kotlinglm.glm
 
 fun camera(translate: Float, rotate: Vec2): Mat4 {
 
-    val projection = glm.perspective(glm.PIf * 0.25f, 4.0f / 3.0f, 0.1f, 100.0f)
-    var view = glm.translate(Mat4(1.0f), Vec3(0.0f, 0.0f, -translate))
-    view = glm.rotate(view, rotate.y, Vec3(-1.0f, 0.0f, 0.0f))
-    view = glm.rotate(view, rotate.x, Vec3(0.0f, 1.0f, 0.0f))
-    val model = glm.scale(Mat4(1.0f), Vec3(0.5f))
+    val projection = GLM.perspective(GLM.PIf * 0.25f, 4.0f / 3.0f, 0.1f, 100.0f)
+    var view = GLM.translate(Mat4(1.0f), Vec3(0.0f, 0.0f, -translate))
+    view = GLM.rotate(view, rotate.y, Vec3(-1.0f, 0.0f, 0.0f))
+    view = GLM.rotate(view, rotate.x, Vec3(0.0f, 1.0f, 0.0f))
+    val model = GLM.scale(Mat4(1.0f), Vec3(0.5f))
     return projection * view * model
 }
 ```
 
 ### How to retrieve it:
 
-You can find all the instructions by [mary](https://github.com/kotlin-graphics/mary)
+
+### Maven
+
+```xml
+<dependency>
+    <groupId>de.bixilon</groupId>
+    <artifactId>kotlin-glm</artifactId>
+    <version>0.9.9.1-4</version>
+</dependency>
+```
+
+### Gradle
+
+```groovy
+implementation 'de.bixilon:kotlin-glm:0.9.9.1-4'
+```

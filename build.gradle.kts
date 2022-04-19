@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    testImplementation("io.kotest:kotest-runner-junit5:5.2.3")
     implementation("kotlin.graphics:unsigned:3.3.3")
     implementation("kotlin.graphics:kool:0.9.1")
 
@@ -22,6 +23,9 @@ dependencies {
 }
 
 tasks.test {
+    useJUnitPlatform()
+}
+tasks.withType<Test>().configureEach {
     useJUnitPlatform()
 }
 

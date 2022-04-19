@@ -1,0 +1,93 @@
+package de.bixilon.kotlinglm.vec1
+
+import de.bixilon.kotlinglm.GLM
+
+
+/**
+ * Created bY GBarbieri on 05.10.2016.
+ */
+
+// TODO fill vec1bool methods as others
+data class Vec1bool(var x: Boolean = false) {
+
+    // -- Explicit basic, conversion other main.and conversion vector constructors --
+
+    constructor(ba: BooleanArray) : this(ba[0])
+
+    constructor(ba: Array<Boolean>) : this(ba[0])
+
+    constructor(init: (Int) -> Boolean): this(init(0))
+
+    // -- Component accesses --
+
+    operator fun get(i: Int): Boolean = when (i) {
+        0 -> x
+        else -> throw IndexOutOfBoundsException()
+    }
+
+    operator fun set(i: Int, b: Boolean) = when (i) {
+        0 -> x = b
+        else -> throw IndexOutOfBoundsException()
+    }
+
+
+    fun put(b: Boolean): Vec1bool {
+        x = b
+        return this
+    }
+
+    fun put(ba: BooleanArray): Vec1bool {
+        x = ba[0]
+        return this
+    }
+
+    fun put(ba: Array<Boolean>): Vec1bool {
+        x = ba[0]
+        return this
+    }
+
+    operator fun invoke(init: (Int) -> Boolean): Vec1bool {
+        x = init(0)
+        return this
+    }
+
+//    fun toBooleanArray(): BooleanArray = to(BooleanArray(length), 0)
+//    infix fun to(floats: BooleanArray): BooleanArray = to(floats, 0)
+//    fun to(floats: BooleanArray, index: Int): FloatArray {
+//        floats[index] = x
+//        return floats
+//    }
+
+    // -- Unary arithmetic vecOperators --
+
+    operator fun not(): Vec1bool = TODO()//Vec1bool(!x)
+
+    fun notAssign(): Vec1bool {
+        x = !x
+        return this
+    }
+
+    infix fun not(res: Vec1bool): Vec1bool {
+        res.x = !x
+        return this
+    }
+
+    // -- relational --
+
+    val all: Boolean
+        get() = GLM.all(this)
+
+    // TODO
+//    infix fun equal(b: Vec2bool) = GLM.equal(this, b)
+//    infix fun equal_(b: Vec2bool) = GLM.equal(this, this, b)
+//    fun equal(b: Vec2bool, res: Vec2bool) = GLM.equal(res, this, b)
+//
+//    infix fun notEqual(b: Vec2bool) = GLM.notEqual(this, b)
+//    fun notEqual(b: Vec2bool, res: Vec2bool) = GLM.notEqual(res, this, b)
+//
+//    fun any() = GLM.any(this)
+//
+//    fun all() = GLM.all(this)
+
+    override fun toString(): String = "($x)"
+}

@@ -1,8 +1,10 @@
 stages:
   - build
+  - test
+  - package
 
 build:
-  image: openjdk:8-slim
+  image: openjdk:11-slim
   stage: build
   before_script:
     - export GRADLE_USER_HOME=`pwd`/.gradle
@@ -10,8 +12,17 @@ build:
     paths:
       - .gradle/wrapper
       - .gradle/caches
-  script: "./gradlew clean assemble"
-  artifacts:
-    paths:
-      - build/libs/*-all.jar
+      - build/
+  script: "./gradlew clean build"
 
+test:
+  image: openjdk:11-slim
+  stage: test
+  before_script:
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+  cache:
+    paths:
+      - .gradle/wrapper
+      - .gradle/caches
+      - build/
+  script: "./gradlew test"
