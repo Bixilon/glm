@@ -1,7 +1,11 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.gradle.api.publish.PublishingExtension
 
 plugins {
     kotlin("jvm") version "1.6.20"
+    `java-library`
+    `maven-publish`
+    signing
 }
 
 group = "de.bixilon.kotlin-glm"
@@ -31,4 +35,69 @@ tasks.withType<Test>().configureEach {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "11"
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+configure<PublishingExtension> {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            groupId = "de.bixilon"
+            artifactId = "kotlin-glm"
+            from(components["java"])
+            versionMapping {
+                usage("java-api") {
+                    fromResolutionOf("runtimeClasspath")
+                }
+                usage("java-runtime") {
+                    fromResolutionResult()
+                }
+            }
+            pom {
+                name.set("kotlin-glm")
+                description.set("Kotlin port of OpenGL Mathematics (GLM)")
+                url.set("https://gitlab.bixilon.de/bixilon/kotlin-glm")
+                licenses {
+                    license {
+                        name.set("MIT")
+                        url.set("https://choosealicense.com/licenses/mit/")
+                    }
+                }
+                developers {
+                    developer {
+                        id.set("bixilon")
+                        name.set("Moritz Zwerger")
+                        email.set("bixilon@bixilon.de")
+                    }
+                }
+                scm {
+                    connection.set("scm:git:https://gitlab.bixilon.de/bixilon/kotlin-glm.git")
+                    developerConnection.set("scm:git:ssh://git@gitlab.bixilon.de:222/bixilon/kotlin-glm.git")
+                    url.set("https://gitlab.bixilon.de/bixilon/kotlin-glm")
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+                username = project.property("NEXUS_USERNAME").toString()
+                password = project.property("NEXUS_PASSWORD").toString()
+            }
+
+            url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+        }
+    }
+}
+signing {
+    sign(publishing.publications["mavenJava"])
+}
+
+tasks.javadoc {
+    if (JavaVersion.current().isJava9Compatible) {
+        (options as StandardJavadocDocletOptions).addBooleanOption("html5", true)
+    }
 }
