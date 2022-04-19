@@ -84,8 +84,8 @@ configure<PublishingExtension> {
     repositories {
         maven {
             credentials {
-                username = project.property("NEXUS_USERNAME").toString()
-                password = project.property("NEXUS_PASSWORD").toString()
+                username = project.properties["NEXUS_USERNAME"].toString()
+                password = project.properties["NEXUS_PASSWORD"].toString()
             }
 
             url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
