@@ -1,10 +1,10 @@
 package glm.gtx
 
-import glm.glm
-import glm.glm.epsilonF
-import glm.shouldEqual
-import glm.vec2.Vec2
-import glm.vec3.Vec3
+import de.bixilon.kotlinglm.glm
+import de.bixilon.kotlinglm.glm.epsilonF
+import de.bixilon.kotlinglm.shouldEqual
+import de.bixilon.kotlinglm.vec2.Vec2
+import de.bixilon.kotlinglm.vec3.Vec3
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 

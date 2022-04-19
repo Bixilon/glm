@@ -1,8 +1,8 @@
 package glm
 
-import glm.mat2x2.Mat2
-import glm.mat2x2.operators.times
-import glm.vec2.Vec2
+import de.bixilon.kotlinglm.mat2x2.Mat2
+import de.bixilon.kotlinglm.mat2x2.operators.times
+import de.bixilon.kotlinglm.vec2.Vec2
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 

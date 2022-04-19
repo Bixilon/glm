@@ -1,9 +1,9 @@
 package glm.ext
 
-import glm.quat.Quat
-import glm.quat.QuatD
-import glm.shouldEqual
-import glm.vec3.Vec3
+import de.bixilon.kotlinglm.quat.Quat
+import de.bixilon.kotlinglm.quat.QuatD
+import de.bixilon.kotlinglm.shouldEqual
+import de.bixilon.kotlinglm.vec3.Vec3
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 

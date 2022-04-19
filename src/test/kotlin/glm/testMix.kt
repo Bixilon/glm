@@ -1,8 +1,7 @@
 package glm
 
-import glm.vec2.Vec2
-import glm.vec2.Vec2ub
-import glm.vec2.Vec2us
+import de.bixilon.kotlinglm.vec2.Vec2
+import de.bixilon.kotlinglm.vec2.Vec2us
 import io.kotest.core.spec.style.StringSpec
 
 

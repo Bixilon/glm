@@ -1,9 +1,8 @@
 package glm
 
-import glm.vec2.Vec2
-import glm.vec3.Vec3
-import glm.vec4.Vec4
-import io.kotest.matchers.shouldBe
+import de.bixilon.kotlinglm.vec2.Vec2
+import de.bixilon.kotlinglm.vec3.Vec3
+import de.bixilon.kotlinglm.vec4.Vec4
 import io.kotest.core.spec.style.StringSpec
 
 class testColorSpace : StringSpec() {

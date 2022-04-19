@@ -1,6 +1,6 @@
 package glm
 
-import glm.mat4x4.Mat4
+import de.bixilon.kotlinglm.mat4x4.Mat4
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 

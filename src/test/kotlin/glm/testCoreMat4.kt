@@ -1,11 +1,11 @@
 package glm
 
-import glm.ext.equal
-import glm.mat4x4.Mat4
-import glm.mat4x4.Mat4d
-import glm.mat4x4.operators.div
-import glm.mat4x4.operators.times
-import glm.vec4.Vec4
+import de.bixilon.kotlinglm.ext.equal
+import de.bixilon.kotlinglm.mat4x4.Mat4
+import de.bixilon.kotlinglm.mat4x4.Mat4d
+import de.bixilon.kotlinglm.mat4x4.operators.div
+import de.bixilon.kotlinglm.mat4x4.operators.times
+import de.bixilon.kotlinglm.vec4.Vec4
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 import kool.BYTES

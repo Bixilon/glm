@@ -1,15 +1,14 @@
 package glm.ext
 
-import glm.BYTES
-import glm.vec1.Vec1
-import glm.vec1.Vec1i
-import glm.vec1.Vec1ui
-import glm.vec2.Vec2i
-import glm.vec2.Vec2ui
-import glm.vec3.Vec3i
-import glm.vec3.Vec3ui
-import glm.vec4.Vec4i
-import glm.vec4.Vec4ui
+import de.bixilon.kotlinglm.BYTES
+import de.bixilon.kotlinglm.vec1.Vec1i
+import de.bixilon.kotlinglm.vec1.Vec1ui
+import de.bixilon.kotlinglm.vec2.Vec2i
+import de.bixilon.kotlinglm.vec2.Vec2ui
+import de.bixilon.kotlinglm.vec3.Vec3i
+import de.bixilon.kotlinglm.vec3.Vec3ui
+import de.bixilon.kotlinglm.vec4.Vec4i
+import de.bixilon.kotlinglm.vec4.Vec4ui
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.shouldNotBe
 import io.kotest.core.spec.style.StringSpec

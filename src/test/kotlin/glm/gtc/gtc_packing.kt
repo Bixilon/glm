@@ -1,10 +1,10 @@
 package glm.gtc
 
-import glm.*
-import glm.vec1.Vec1
-import glm.vec2.*
-import glm.vec3.Vec3
-import glm.vec4.*
+import de.bixilon.kotlinglm.*
+import de.bixilon.kotlinglm.vec1.Vec1
+import de.bixilon.kotlinglm.vec2.*
+import de.bixilon.kotlinglm.vec3.Vec3
+import de.bixilon.kotlinglm.vec4.*
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldNotBe

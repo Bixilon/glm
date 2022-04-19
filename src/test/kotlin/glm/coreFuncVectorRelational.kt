@@ -1,15 +1,14 @@
 package glm
 
-import glm.vec1.Vec1bool
-import glm.vec2.Vec2
-import glm.vec2.Vec2bool
-import glm.vec2.Vec2i
-import glm.vec3.Vec3
-import glm.vec3.Vec3bool
-import glm.vec3.Vec3i
-import glm.vec4.Vec4
-import glm.vec4.Vec4bool
-import glm.vec4.Vec4i
+import de.bixilon.kotlinglm.vec2.Vec2
+import de.bixilon.kotlinglm.vec2.Vec2bool
+import de.bixilon.kotlinglm.vec2.Vec2i
+import de.bixilon.kotlinglm.vec3.Vec3
+import de.bixilon.kotlinglm.vec3.Vec3bool
+import de.bixilon.kotlinglm.vec3.Vec3i
+import de.bixilon.kotlinglm.vec4.Vec4
+import de.bixilon.kotlinglm.vec4.Vec4bool
+import de.bixilon.kotlinglm.vec4.Vec4i
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 

@@ -1,12 +1,12 @@
 package glm.gtx
 
-import glm.dualQuat.DualQuat
-import glm.mat2x2.Mat2
-import glm.quat.Quat
-import glm.vec1.*
-import glm.vec2.*
-import glm.vec3.*
-import glm.vec4.*
+import de.bixilon.kotlinglm.dualQuat.DualQuat
+import de.bixilon.kotlinglm.mat2x2.Mat2
+import de.bixilon.kotlinglm.quat.Quat
+import de.bixilon.kotlinglm.vec1.*
+import de.bixilon.kotlinglm.vec2.*
+import de.bixilon.kotlinglm.vec3.*
+import de.bixilon.kotlinglm.vec4.*
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 

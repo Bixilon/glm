@@ -4,8 +4,8 @@ plugins {
     kotlin("jvm") version "1.6.20"
 }
 
-group = "de.bixilon.glm"
-version = "1.0"
+group = "de.bixilon.kotlin-glm"
+version = "0.9.9.1-4"
 
 repositories {
     mavenCentral()

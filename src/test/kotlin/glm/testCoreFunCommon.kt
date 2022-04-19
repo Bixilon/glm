@@ -1,23 +1,23 @@
 @file:Suppress("DIVISION_BY_ZERO")
 package glm
 
-import glm.ext.equal
-import glm.glm.epsilonF
-import glm.vec1.Vec1
-import glm.vec1.Vec1d
-import glm.vec1.Vec1i
-import glm.vec2.Vec2
-import glm.vec2.Vec2bool
-import glm.vec2.Vec2d
-import glm.vec2.Vec2i
-import glm.vec3.Vec3
-import glm.vec3.Vec3bool
-import glm.vec3.Vec3d
-import glm.vec3.Vec3i
-import glm.vec4.Vec4
-import glm.vec4.Vec4bool
-import glm.vec4.Vec4d
-import glm.vec4.Vec4i
+import de.bixilon.kotlinglm.ext.equal
+import de.bixilon.kotlinglm.glm.epsilonF
+import de.bixilon.kotlinglm.vec1.Vec1
+import de.bixilon.kotlinglm.vec1.Vec1d
+import de.bixilon.kotlinglm.vec1.Vec1i
+import de.bixilon.kotlinglm.vec2.Vec2
+import de.bixilon.kotlinglm.vec2.Vec2bool
+import de.bixilon.kotlinglm.vec2.Vec2d
+import de.bixilon.kotlinglm.vec2.Vec2i
+import de.bixilon.kotlinglm.vec3.Vec3
+import de.bixilon.kotlinglm.vec3.Vec3bool
+import de.bixilon.kotlinglm.vec3.Vec3d
+import de.bixilon.kotlinglm.vec3.Vec3i
+import de.bixilon.kotlinglm.vec4.Vec4
+import de.bixilon.kotlinglm.vec4.Vec4bool
+import de.bixilon.kotlinglm.vec4.Vec4d
+import de.bixilon.kotlinglm.vec4.Vec4i
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 

@@ -1,11 +1,8 @@
-![glm](src/main/resources/logo-mini.png)
+![glm](logo-mini.png)
 
-[![Build Status](https://github.com/kotlin-graphics/glm/workflows/build/badge.svg)](https://github.com/kotlin-graphics/glm/actions?workflow=build)
 [![license](https://img.shields.io/badge/License-MIT-orange.svg)](https://github.com/kotlin-graphics/glm/blob/master/LICENSE) 
-[![Release](https://jitpack.io/v/kotlin-graphics/glm.svg)](https://jitpack.io/#kotlin-graphics/glm) 
-![Size](https://github-size-badge.herokuapp.com/kotlin-graphics/glm.svg)
-[![Github All Releases](https://img.shields.io/github/downloads/kotlin-graphics/glm/total.svg)]()
-[![Awesome Kotlin Badge](https://kotlin.link/awesome-kotlin.svg)](https://github.com/KotlinBy/awesome-kotlin)
+
+This is a fork of [kotlin-graphics/glm](https://github.com/kotlin-graphics/glm)
 
 This is the Kotlin port of [OpenGL Mathematics](http://glm.g-truc.net/) (*GLM*), written by [g-truc](https://github.com/Groovounet) ([repository](https://github.com/g-truc/glm)), a header only C++ mathematics library for graphics software based on the [OpenGL Shading Language (GLSL) specifications](https://www.opengl.org/registry/doc/GLSLangSpec.4.50.diff.pdf).
 
@@ -23,10 +20,10 @@ The source code and the documentation are licensed under both the [Happy Bunny L
 Don't hesitate to contribute to the project by submitting [issues](https://github.com/kotlin-graphics/glm/issues) or [pull requests](https://github.com/kotlin-graphics/glm/pulls) for bugs and features. Any feedback is welcome at [elect86@gmail.com](mailto://elect86@gmail.com).
 
 ```kotlin
-import glm_.vec2.Vec2
-import glm_.vec3.Vec3
-import glm_.mat4x4.Mat4
-import glm_.glm
+import de.bixilon.kotlinglm.vec2.Vec2
+import de.bixilon.kotlinglm.vec3.Vec3
+import de.bixilon.kotlinglm.mat4x4.Mat4
+import de.bixilon.kotlinglm.glm
 
 fun camera(translate: Float, rotate: Vec2): Mat4 {
 

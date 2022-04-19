@@ -1,7 +1,7 @@
 package glm.ext
 
-import glm.glm
-import glm.shouldEqual
+import de.bixilon.kotlinglm.glm
+import de.bixilon.kotlinglm.shouldEqual
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 

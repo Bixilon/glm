@@ -1,9 +1,9 @@
 package glm
 
-import glm.func.cos
-import glm.func.rad
-import glm.func.sin
-import glm.vec3.Vec3
+import de.bixilon.kotlinglm.func.cos
+import de.bixilon.kotlinglm.func.rad
+import de.bixilon.kotlinglm.func.sin
+import de.bixilon.kotlinglm.vec3.Vec3
 import io.kotest.core.spec.style.StringSpec
 
 class testReflection : StringSpec() {

@@ -1,9 +1,9 @@
 package glm;
 
-import glm.mat4x4.Mat4;
-import glm.vec1.Vec1;
-import glm.vec2.Vec2;
-import glm.vec3.Vec3;
+import de.bixilon.kotlinglm.mat4x4.Mat4;
+import de.bixilon.kotlinglm.vec1.Vec1;
+import de.bixilon.kotlinglm.vec2.Vec2;
+import de.bixilon.kotlinglm.vec3.Vec3;
 
 import static glm.Java.glm;
 

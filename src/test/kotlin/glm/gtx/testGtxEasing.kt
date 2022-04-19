@@ -1,6 +1,6 @@
 package glm.gtx
 
-import glm.glm
+import de.bixilon.kotlinglm.glm
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 

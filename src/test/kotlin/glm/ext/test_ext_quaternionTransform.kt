@@ -1,7 +1,7 @@
 package glm.ext
 
-import glm.glm
-import glm.vec3.Vec3
+import de.bixilon.kotlinglm.glm
+import de.bixilon.kotlinglm.vec3.Vec3
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.floats.shouldNotBeGreaterThan
 

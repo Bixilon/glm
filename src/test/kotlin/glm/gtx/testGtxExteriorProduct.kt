@@ -1,7 +1,7 @@
 package glm.gtx
 
-import glm.glm
-import glm.vec2.Vec2
+import de.bixilon.kotlinglm.glm
+import de.bixilon.kotlinglm.vec2.Vec2
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 

@@ -1,12 +1,11 @@
 package glm
 
-import glm.vec1.Vec1
-import glm.vec1.Vec1d
-import glm.vec1.Vec1i
-import glm.vec2.Vec2
-import glm.vec2.Vec2d
-import glm.vec2.Vec2i
-import glm.vec2.operators.timesAssign
+import de.bixilon.kotlinglm.vec1.Vec1
+import de.bixilon.kotlinglm.vec1.Vec1d
+import de.bixilon.kotlinglm.vec1.Vec1i
+import de.bixilon.kotlinglm.vec2.Vec2
+import de.bixilon.kotlinglm.vec2.Vec2d
+import de.bixilon.kotlinglm.vec2.Vec2i
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 import kool.BYTES

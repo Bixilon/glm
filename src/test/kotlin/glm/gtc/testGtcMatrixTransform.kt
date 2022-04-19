@@ -1,12 +1,12 @@
 package glm.gtc
 
-import glm.func.rad
-import glm.glm
-import glm.mat4x4.Mat4
-import glm.vec2.Vec2
-import glm.vec3.Vec3
-import glm.vec4.Vec4
-import glm.vec4.Vec4i
+import de.bixilon.kotlinglm.func.rad
+import de.bixilon.kotlinglm.glm
+import de.bixilon.kotlinglm.mat4x4.Mat4
+import de.bixilon.kotlinglm.vec2.Vec2
+import de.bixilon.kotlinglm.vec3.Vec3
+import de.bixilon.kotlinglm.vec4.Vec4
+import de.bixilon.kotlinglm.vec4.Vec4i
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 

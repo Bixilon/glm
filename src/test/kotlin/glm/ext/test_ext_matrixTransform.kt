@@ -1,11 +1,11 @@
 package glm.ext
 
-import glm.func.rad
-import glm.glm
-import glm.mat4x4.Mat4
-import glm.shouldEqual
-import glm.vec3.Vec3
-import glm.vec4.Vec4
+import de.bixilon.kotlinglm.func.rad
+import de.bixilon.kotlinglm.glm
+import de.bixilon.kotlinglm.mat4x4.Mat4
+import de.bixilon.kotlinglm.shouldEqual
+import de.bixilon.kotlinglm.vec3.Vec3
+import de.bixilon.kotlinglm.vec4.Vec4
 import io.kotest.core.spec.style.StringSpec
 
 class test_ext_matrixTransform : StringSpec() {

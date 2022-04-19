@@ -1,6 +1,6 @@
 package glm.ext
 
-import glm.glm
+import de.bixilon.kotlinglm.glm
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.doubles.shouldBeGreaterThan
 import io.kotest.matchers.doubles.shouldBeLessThan

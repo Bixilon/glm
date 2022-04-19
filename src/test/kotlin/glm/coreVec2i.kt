@@ -1,7 +1,6 @@
 package glm
 
-import glm.vec2.Vec2bool
-import glm.vec2.Vec2i
+import de.bixilon.kotlinglm.vec2.Vec2i
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 

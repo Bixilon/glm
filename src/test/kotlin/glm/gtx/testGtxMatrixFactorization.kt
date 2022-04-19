@@ -1,7 +1,7 @@
 package glm.gtx
 
-import glm.glm
-import glm.mat3x3.Mat3
+import de.bixilon.kotlinglm.glm
+import de.bixilon.kotlinglm.mat3x3.Mat3
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.floats.shouldBeLessThanOrEqual
 import io.kotest.matchers.shouldBe

@@ -1,6 +1,6 @@
 package glm
 
-import glm.vec2.Vec2
+import de.bixilon.kotlinglm.vec2.Vec2
 import io.kotest.core.spec.style.StringSpec
 
 class testGauss : StringSpec() {

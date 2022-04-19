@@ -1,8 +1,8 @@
 package glm.gtx
 
-import glm.glm
-import glm.shouldEqual
-import glm.vec3.Vec3
+import de.bixilon.kotlinglm.glm
+import de.bixilon.kotlinglm.shouldEqual
+import de.bixilon.kotlinglm.vec3.Vec3
 import io.kotest.core.spec.style.StringSpec
 
 class testGtxClosestPoint : StringSpec() {

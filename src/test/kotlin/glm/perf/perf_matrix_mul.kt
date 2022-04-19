@@ -1,10 +1,9 @@
 package glm.perf
 
-import glm.f
-import glm.mat4x4.Mat4
+import de.bixilon.kotlinglm.f
+import de.bixilon.kotlinglm.mat4x4.Mat4
 import io.kotest.core.spec.style.StringSpec
 import kotlin.system.measureNanoTime
-import kotlin.system.measureTimeMillis
 
 class perf_matrix_mul : StringSpec() { // TODO all other case
 

@@ -1,8 +1,8 @@
 package glm.gtx
 
-import glm.glm
-import glm.mat4x4.Mat4
-import glm.vec3.Vec3
+import de.bixilon.kotlinglm.glm
+import de.bixilon.kotlinglm.mat4x4.Mat4
+import de.bixilon.kotlinglm.vec3.Vec3
 import io.kotest.core.spec.style.StringSpec
 
 class testGtxMatrixInterpolation : StringSpec() {

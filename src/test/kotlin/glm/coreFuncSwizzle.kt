@@ -1,15 +1,15 @@
 package glm
 
-import glm.ext.equal
-import glm.vec2.Vec2i
-import glm.vec2.swizzle.xy
-import glm.vec2.swizzle.yx
-import glm.vec3.Vec3i
-import glm.vec3.swizzle.*
-import glm.vec4.Vec4
-import glm.vec4.Vec4i
-import glm.vec4.swizzle.wzyx
-import glm.vec4.swizzle.xyzw
+import de.bixilon.kotlinglm.ext.equal
+import de.bixilon.kotlinglm.vec2.Vec2i
+import de.bixilon.kotlinglm.vec2.swizzle.xy
+import de.bixilon.kotlinglm.vec2.swizzle.yx
+import de.bixilon.kotlinglm.vec3.Vec3i
+import de.bixilon.kotlinglm.vec3.swizzle.*
+import de.bixilon.kotlinglm.vec4.Vec4
+import de.bixilon.kotlinglm.vec4.Vec4i
+import de.bixilon.kotlinglm.vec4.swizzle.wzyx
+import de.bixilon.kotlinglm.vec4.swizzle.xyzw
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.shouldNotBe

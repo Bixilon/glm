@@ -1,22 +1,19 @@
 package glm
 
-import glm.mat2x2.Mat2
-import glm.mat3x3.Mat3
-import glm.mat4x4.Mat4
-import glm.mat4x4.Mat4d
-import glm.quat.Quat
-import glm.quat.QuatD
-import glm.vec1.Vec1
-import glm.vec1.Vec1d
-import glm.vec2.Vec2
-import glm.vec2.Vec2d
-import glm.vec2.Vec2i
-import glm.vec3.Vec3
-import glm.vec3.Vec3d
-import glm.vec3.Vec3i
-import glm.vec4.Vec4
-import glm.vec4.Vec4d
-import glm.vec4.Vec4i
+import de.bixilon.kotlinglm.mat2x2.Mat2
+import de.bixilon.kotlinglm.mat3x3.Mat3
+import de.bixilon.kotlinglm.mat4x4.Mat4
+import de.bixilon.kotlinglm.mat4x4.Mat4d
+import de.bixilon.kotlinglm.quat.Quat
+import de.bixilon.kotlinglm.quat.QuatD
+import de.bixilon.kotlinglm.vec1.Vec1
+import de.bixilon.kotlinglm.vec1.Vec1d
+import de.bixilon.kotlinglm.vec2.Vec2
+import de.bixilon.kotlinglm.vec2.Vec2d
+import de.bixilon.kotlinglm.vec3.Vec3
+import de.bixilon.kotlinglm.vec3.Vec3d
+import de.bixilon.kotlinglm.vec4.Vec4
+import de.bixilon.kotlinglm.vec4.Vec4d
 import io.kotest.matchers.shouldBe
 
 infix fun Float.shouldEqual(f: Float) = shouldEqual(f, glm.εf)

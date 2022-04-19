@@ -1,12 +1,12 @@
 package glm
 
-import glm.glm.matrixCompMult
-import glm.mat2x2.Mat2
-import glm.mat3x3.Mat3
-import glm.mat4x4.Mat4
-import glm.vec2.Vec2
-import glm.vec3.Vec3
-import glm.vec4.Vec4
+import de.bixilon.kotlinglm.glm.matrixCompMult
+import de.bixilon.kotlinglm.mat2x2.Mat2
+import de.bixilon.kotlinglm.mat3x3.Mat3
+import de.bixilon.kotlinglm.mat4x4.Mat4
+import de.bixilon.kotlinglm.vec2.Vec2
+import de.bixilon.kotlinglm.vec3.Vec3
+import de.bixilon.kotlinglm.vec4.Vec4
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 

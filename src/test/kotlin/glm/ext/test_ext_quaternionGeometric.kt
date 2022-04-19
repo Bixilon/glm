@@ -1,10 +1,8 @@
 package glm.ext
 
-import glm.func.deg
-import glm.glm
-import glm.quat.Quat
-import glm.shouldEqual
-import glm.vec3.Vec3
+import de.bixilon.kotlinglm.quat.Quat
+import de.bixilon.kotlinglm.shouldEqual
+import de.bixilon.kotlinglm.vec3.Vec3
 import io.kotest.core.spec.style.StringSpec
 
 class test_ext_quaternionGeometric : StringSpec() {

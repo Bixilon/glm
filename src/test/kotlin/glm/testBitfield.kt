@@ -1,9 +1,9 @@
 package glm
 
-import glm.vec2.Vec2b
-import glm.vec2.Vec2s
-import glm.vec4.Vec4b
-import glm.vec4.Vec4i
+import de.bixilon.kotlinglm.vec2.Vec2b
+import de.bixilon.kotlinglm.vec2.Vec2s
+import de.bixilon.kotlinglm.vec4.Vec4b
+import de.bixilon.kotlinglm.vec4.Vec4i
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 import kool.BYTES

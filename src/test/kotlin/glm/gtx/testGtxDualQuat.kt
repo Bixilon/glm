@@ -1,19 +1,18 @@
 package glm.gtx
 
-import glm.detail.Random
-import glm.dualQuat.DualQuat
-import glm.dualQuat.DualQuatD
-import glm.dualQuat.times
-import glm.f
-import glm.glm
-import glm.mat4x4.Mat4
-import glm.quat.Quat
-import glm.quat.QuatD
-import glm.shouldEqual
-import glm.vec3.Vec3
-import glm.vec3.Vec3d
-import glm.vec4.Vec4
-import io.kotest.matchers.shouldBe
+import de.bixilon.kotlinglm.detail.Random
+import de.bixilon.kotlinglm.dualQuat.DualQuat
+import de.bixilon.kotlinglm.dualQuat.DualQuatD
+import de.bixilon.kotlinglm.dualQuat.times
+import de.bixilon.kotlinglm.f
+import de.bixilon.kotlinglm.glm
+import de.bixilon.kotlinglm.mat4x4.Mat4
+import de.bixilon.kotlinglm.quat.Quat
+import de.bixilon.kotlinglm.quat.QuatD
+import de.bixilon.kotlinglm.shouldEqual
+import de.bixilon.kotlinglm.vec3.Vec3
+import de.bixilon.kotlinglm.vec3.Vec3d
+import de.bixilon.kotlinglm.vec4.Vec4
 import io.kotest.core.spec.style.StringSpec
 
 class testGtxDualQuat : StringSpec() {

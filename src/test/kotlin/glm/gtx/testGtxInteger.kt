@@ -1,9 +1,9 @@
 package glm.gtx
 
-import glm.d
-import glm.glm
-import glm.i
-import glm.msb
+import de.bixilon.kotlinglm.d
+import de.bixilon.kotlinglm.glm
+import de.bixilon.kotlinglm.i
+import de.bixilon.kotlinglm.msb
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 

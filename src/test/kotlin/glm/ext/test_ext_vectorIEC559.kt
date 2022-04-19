@@ -1,14 +1,14 @@
 package glm.ext
 
-import glm.shouldEqual
-import glm.vec1.Vec1
-import glm.vec1.Vec1d
-import glm.vec2.Vec2
-import glm.vec2.Vec2d
-import glm.vec3.Vec3
-import glm.vec3.Vec3d
-import glm.vec4.Vec4
-import glm.vec4.Vec4d
+import de.bixilon.kotlinglm.shouldEqual
+import de.bixilon.kotlinglm.vec1.Vec1
+import de.bixilon.kotlinglm.vec1.Vec1d
+import de.bixilon.kotlinglm.vec2.Vec2
+import de.bixilon.kotlinglm.vec2.Vec2d
+import de.bixilon.kotlinglm.vec3.Vec3
+import de.bixilon.kotlinglm.vec3.Vec3d
+import de.bixilon.kotlinglm.vec4.Vec4
+import de.bixilon.kotlinglm.vec4.Vec4d
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.shouldNotBe
 import io.kotest.core.spec.style.StringSpec

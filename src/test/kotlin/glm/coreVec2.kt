@@ -4,16 +4,16 @@ package glm
  * Created by GBarbieri on 05.10.2016.
  */
 
-import glm.vec1.Vec1
-import glm.vec1.Vec1d
-import glm.vec2.Vec2
-import glm.vec2.Vec2d
-import glm.vec2.Vec2i
-import glm.vec2.operators.div
-import glm.vec2.operators.minus
-import glm.vec2.operators.plus
-import glm.vec2.operators.times
-import glm.vec2.swizzle.xy
+import de.bixilon.kotlinglm.vec1.Vec1
+import de.bixilon.kotlinglm.vec1.Vec1d
+import de.bixilon.kotlinglm.vec2.Vec2
+import de.bixilon.kotlinglm.vec2.Vec2d
+import de.bixilon.kotlinglm.vec2.Vec2i
+import de.bixilon.kotlinglm.vec2.operators.div
+import de.bixilon.kotlinglm.vec2.operators.minus
+import de.bixilon.kotlinglm.vec2.operators.plus
+import de.bixilon.kotlinglm.vec2.operators.times
+import de.bixilon.kotlinglm.vec2.swizzle.xy
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 

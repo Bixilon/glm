@@ -3,7 +3,7 @@ package glm
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 import unsigned.toULong
-import glm.testCoreFuncInteger.Result.*
+import de.bixilon.kotlinglm.testCoreFuncInteger.Result.*
 import kool.BYTES
 
 class testCoreFuncInteger : StringSpec() {
