@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "de.bixilon.kotlin-glm"
-version = "0.9.9.1-4"
+version = "0.9.9.1-5"
 
 repositories {
     mavenCentral()
@@ -19,8 +19,10 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     testImplementation("io.kotest:kotest-runner-junit5:5.2.3")
-    implementation("kotlin.graphics:unsigned:3.3.3")
-    implementation("kotlin.graphics:kool:0.9.1")
+    compileOnly("kotlin.graphics:unsigned:3.3.3")
+    testImplementation("kotlin.graphics:unsigned:3.3.3")
+    compileOnly("kotlin.graphics:kool:0.9.1")
+    testImplementation("kotlin.graphics:kool:0.9.1")
 
     compileOnly(platform("org.lwjgl:lwjgl-bom:3.3.1"))
     compileOnly("org.lwjgl", "lwjgl")

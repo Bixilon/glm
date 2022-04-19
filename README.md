@@ -23,7 +23,7 @@ Don't hesitate to contribute to the project by submitting [issues](https://githu
 import de.bixilon.kotlinglm.vec2.Vec2
 import de.bixilon.kotlinglm.vec3.Vec3
 import de.bixilon.kotlinglm.mat4x4.Mat4
-import de.bixilon.kotlinglm.glm
+import de.bixilon.kotlinglm.GLM
 
 fun camera(translate: Float, rotate: Vec2): Mat4 {
 
@@ -45,12 +45,17 @@ fun camera(translate: Float, rotate: Vec2): Mat4 {
 <dependency>
     <groupId>de.bixilon</groupId>
     <artifactId>kotlin-glm</artifactId>
-    <version>0.9.9.1-4</version>
+    <version>0.9.9.1-5</version>
 </dependency>
 ```
 
 ### Gradle
 
 ```groovy
-implementation 'de.bixilon:kotlin-glm:0.9.9.1-4'
+implementation 'de.bixilon:kotlin-glm:0.9.9.1-5'
 ```
+
+### Additional dependencies
+If you plan to use unsigned primitives add [kotlin-unsigned](https://github.com/kotlin-graphics/kotlin-unsigned)
+
+If you plan to use lwjgl and buffers, add lwjgl and [kool](https://github.com/kotlin-graphics/kool)
