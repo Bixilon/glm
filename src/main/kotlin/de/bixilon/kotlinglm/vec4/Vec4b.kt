@@ -10,7 +10,7 @@ import de.bixilon.kotlinglm.vec3.Vec3b
 import de.bixilon.kotlinglm.vec3.Vec3bool
 import de.bixilon.kotlinglm.vec3.Vec3t
 import de.bixilon.kotlinglm.vec4.operators.op_Vec4b
-import kool.*
+import de.bixilon.kotlinkool.*
 import org.lwjgl.system.MemoryUtil.memGetByte
 import org.lwjgl.system.MemoryUtil.memPutByte
 import java.io.PrintStream

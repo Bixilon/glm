@@ -22,7 +22,7 @@ import de.bixilon.kotlinglm.vec3.Vec3d
 import de.bixilon.kotlinglm.vec3.Vec3t
 import de.bixilon.kotlinglm.vec4.Vec4d
 import de.bixilon.kotlinglm.vec4.Vec4t
-import kool.*
+import de.bixilon.kotlinkool.*
 import org.lwjgl.system.MemoryUtil.memGetDouble
 import org.lwjgl.system.MemoryUtil.memPutDouble
 import java.nio.ByteBuffer

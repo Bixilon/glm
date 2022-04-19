@@ -8,9 +8,9 @@ import de.bixilon.kotlinglm.vec3.Vec3bool
 import de.bixilon.kotlinglm.vec3.Vec3t
 import de.bixilon.kotlinglm.vec4.Vec4bool
 import de.bixilon.kotlinglm.vec4.Vec4t
-import kool.BYTES
-import kool.Ptr
-import kool.pos
+import de.bixilon.kotlinkool.BYTES
+import de.bixilon.kotlinkool.Ptr
+import de.bixilon.kotlinkool.pos
 import org.lwjgl.system.MemoryUtil.memGetByte
 import org.lwjgl.system.MemoryUtil.memPutByte
 import unsigned.Ubyte

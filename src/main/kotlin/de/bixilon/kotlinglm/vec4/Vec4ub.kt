@@ -10,10 +10,10 @@ import de.bixilon.kotlinglm.vec3.Vec3bool
 import de.bixilon.kotlinglm.vec3.Vec3t
 import de.bixilon.kotlinglm.vec3.Vec3ub
 import de.bixilon.kotlinglm.vec4.operators.op_Vec4ub
-import kool.BYTES
-import kool.Ptr
-import kool.pos
-import kool.set
+import de.bixilon.kotlinkool.BYTES
+import de.bixilon.kotlinkool.Ptr
+import de.bixilon.kotlinkool.pos
+import de.bixilon.kotlinkool.set
 import org.lwjgl.system.MemoryUtil.memGetByte
 import unsigned.Ubyte
 import java.io.PrintStream

@@ -10,7 +10,7 @@ import de.bixilon.kotlinglm.vec3.Vec3bool
 import de.bixilon.kotlinglm.vec3.Vec3t
 import de.bixilon.kotlinglm.vec3.Vec3ui
 import de.bixilon.kotlinglm.vec4.operators.op_Vec4ui
-import kool.*
+import de.bixilon.kotlinkool.*
 import org.lwjgl.system.MemoryStack
 import org.lwjgl.system.MemoryUtil.memGetInt
 import unsigned.Uint

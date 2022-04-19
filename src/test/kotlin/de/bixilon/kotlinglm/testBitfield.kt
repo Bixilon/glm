@@ -6,7 +6,7 @@ import de.bixilon.kotlinglm.vec4.Vec4b
 import de.bixilon.kotlinglm.vec4.Vec4i
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
-import kool.BYTES
+import de.bixilon.kotlinkool.BYTES
 import unsigned.toUInt
 import unsigned.toULong
 import kotlin.system.measureNanoTime

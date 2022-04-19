@@ -12,7 +12,7 @@ import de.bixilon.kotlinglm.vec4.Vec4d
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.shouldNotBe
 import io.kotest.core.spec.style.StringSpec
-import kool.BYTES
+import de.bixilon.kotlinkool.BYTES
 
 class test_ext_vectorIEC559 : StringSpec() {
 

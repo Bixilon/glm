@@ -5,8 +5,8 @@ import de.bixilon.kotlinglm.f
 import de.bixilon.kotlinglm.toFloat
 import de.bixilon.kotlinglm.vec3.Vec3
 import de.bixilon.kotlinglm.vec3.Vec3t
-import kool.BYTES
-import kool.set
+import de.bixilon.kotlinkool.BYTES
+import de.bixilon.kotlinkool.set
 import java.nio.ByteBuffer
 import java.nio.FloatBuffer
 

@@ -4,7 +4,7 @@ import de.bixilon.kotlinglm.vec1.Vec1i
 import de.bixilon.kotlinglm.vec2.Vec2i
 import de.bixilon.kotlinglm.vec3.Vec3i
 import de.bixilon.kotlinglm.vec4.Vec4i
-import kool.BYTES
+import de.bixilon.kotlinkool.BYTES
 import unsigned.toUInt
 import unsigned.toULong
 import unsigned.toUShort

@@ -4,7 +4,7 @@ import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
 import unsigned.toULong
 import de.bixilon.kotlinglm.testCoreFuncInteger.Result.*
-import kool.BYTES
+import de.bixilon.kotlinkool.BYTES
 
 class testCoreFuncInteger : StringSpec() {
 

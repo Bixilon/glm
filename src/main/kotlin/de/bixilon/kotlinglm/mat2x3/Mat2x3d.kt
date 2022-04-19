@@ -3,8 +3,8 @@ package  de.bixilon.kotlinglm.mat2x3
 import de.bixilon.kotlinglm.*
 import de.bixilon.kotlinglm.vec3.Vec3d
 import de.bixilon.kotlinglm.vec3.Vec3t
-import kool.BYTES
-import kool.set
+import de.bixilon.kotlinkool.BYTES
+import de.bixilon.kotlinkool.set
 import java.nio.ByteBuffer
 import java.nio.DoubleBuffer
 

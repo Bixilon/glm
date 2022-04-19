@@ -1,6 +1,6 @@
 package de.bixilon.kotlinglm
 
-import kool.*
+import de.bixilon.kotlinkool.*
 import org.lwjgl.system.MemoryStack
 import java.nio.*
 

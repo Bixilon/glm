@@ -3,13 +3,12 @@ import org.gradle.api.publish.PublishingExtension
 
 plugins {
     kotlin("jvm") version "1.6.20"
-    `java-library`
     `maven-publish`
     signing
 }
 
 group = "de.bixilon.kotlin-glm"
-version = "0.9.9.1-5"
+version = "0.9.9.1-6"
 
 repositories {
     mavenCentral()
@@ -21,11 +20,11 @@ dependencies {
     testImplementation("io.kotest:kotest-runner-junit5:5.2.3")
     compileOnly("kotlin.graphics:unsigned:3.3.3")
     testImplementation("kotlin.graphics:unsigned:3.3.3")
-    compileOnly("kotlin.graphics:kool:0.9.1")
-    testImplementation("kotlin.graphics:kool:0.9.1")
 
     compileOnly(platform("org.lwjgl:lwjgl-bom:3.3.1"))
     compileOnly("org.lwjgl", "lwjgl")
+
+    implementation("de.bixilon:kotlin-kool:0.9.3-1")
 }
 
 tasks.test {
@@ -91,9 +90,11 @@ configure<PublishingExtension> {
             }
 
             url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+            // url = uri("https://s01.oss.sonatype.org/content/repositories/releases/")
         }
     }
 }
+
 signing {
     sign(publishing.publications["mavenJava"])
 }
@@ -101,5 +102,11 @@ signing {
 tasks.javadoc {
     if (JavaVersion.current().isJava9Compatible) {
         (options as StandardJavadocDocletOptions).addBooleanOption("html5", true)
+    }
+}
+
+kotlin {
+    jvmToolchain {
+        (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of("11"))
     }
 }

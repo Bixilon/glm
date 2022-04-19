@@ -8,7 +8,7 @@ import de.bixilon.kotlinglm.vec2.Vec2d
 import de.bixilon.kotlinglm.vec2.Vec2i
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
-import kool.BYTES
+import de.bixilon.kotlinkool.BYTES
 
 class CoreVec1 : StringSpec() {
 

@@ -8,9 +8,9 @@ import de.bixilon.kotlinglm.vec3.Vec3bool
 import de.bixilon.kotlinglm.vec3.Vec3t
 import de.bixilon.kotlinglm.vec4.Vec4bool
 import de.bixilon.kotlinglm.vec4.Vec4t
-import kool.IntBuffer
-import kool.pos
-import kool.set
+import de.bixilon.kotlinkool.IntBuffer
+import de.bixilon.kotlinkool.pos
+import de.bixilon.kotlinkool.set
 import org.lwjgl.system.MemoryStack
 import unsigned.Uint
 import java.nio.*

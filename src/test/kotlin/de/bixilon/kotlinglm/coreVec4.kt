@@ -14,7 +14,7 @@ import de.bixilon.kotlinglm.vec4.operators.times
 import de.bixilon.kotlinglm.vec4.swizzle.*
 import io.kotest.matchers.shouldBe
 import io.kotest.core.spec.style.StringSpec
-import kool.BYTES
+import de.bixilon.kotlinkool.BYTES
 
 class coreVec4 : StringSpec() {
 

@@ -17,7 +17,7 @@ import de.bixilon.kotlinglm.vec2.Vec2bool
 import de.bixilon.kotlinglm.vec2.Vec2t
 import de.bixilon.kotlinglm.vec3.Vec3
 import de.bixilon.kotlinglm.vec4.Vec4
-import kool.*
+import de.bixilon.kotlinkool.*
 import org.lwjgl.system.MemoryUtil.memGetFloat
 import org.lwjgl.system.MemoryUtil.memPutFloat
 import java.nio.ByteBuffer

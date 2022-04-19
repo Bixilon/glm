@@ -11,9 +11,9 @@ import de.bixilon.kotlinglm.mat4x4.Mat4
 import de.bixilon.kotlinglm.vec3.Vec3
 import de.bixilon.kotlinglm.vec4.Vec4
 import de.bixilon.kotlinglm.vec4.Vec4t
-import kool.BYTES
-import kool.FloatPtr
-import kool.Ptr
+import de.bixilon.kotlinkool.BYTES
+import de.bixilon.kotlinkool.FloatPtr
+import de.bixilon.kotlinkool.Ptr
 import org.lwjgl.system.MemoryUtil.memGetFloat
 import org.lwjgl.system.MemoryUtil.memPutFloat
 import java.io.InputStream

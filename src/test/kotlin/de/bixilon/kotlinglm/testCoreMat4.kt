@@ -8,7 +8,7 @@ import de.bixilon.kotlinglm.mat4x4.operators.times
 import de.bixilon.kotlinglm.vec4.Vec4
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
-import kool.BYTES
+import de.bixilon.kotlinkool.BYTES
 
 /**
  * Created by GBarbieri on 12.12.2016.

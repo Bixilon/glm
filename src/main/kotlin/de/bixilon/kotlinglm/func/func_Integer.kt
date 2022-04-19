@@ -1,7 +1,7 @@
 package de.bixilon.kotlinglm.func
 
 import de.bixilon.kotlinglm.*
-import kool.BYTES
+import de.bixilon.kotlinkool.BYTES
 import unsigned.toULong
 
 /**

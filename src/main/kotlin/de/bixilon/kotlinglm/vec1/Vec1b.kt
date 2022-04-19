@@ -9,9 +9,9 @@ import de.bixilon.kotlinglm.vec3.Vec3bool
 import de.bixilon.kotlinglm.vec3.Vec3t
 import de.bixilon.kotlinglm.vec4.Vec4bool
 import de.bixilon.kotlinglm.vec4.Vec4t
-import kool.BYTES
-import kool.BytePtr
-import kool.pos
+import de.bixilon.kotlinkool.BYTES
+import de.bixilon.kotlinkool.BytePtr
+import de.bixilon.kotlinkool.pos
 import java.nio.*
 import kotlin.math.abs
 

@@ -1,7 +1,6 @@
 stages:
   - build
   - test
-  - package
 
 build:
   image: openjdk:11-slim

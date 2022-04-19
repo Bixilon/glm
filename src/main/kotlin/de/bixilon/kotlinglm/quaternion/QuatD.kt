@@ -7,9 +7,9 @@ import de.bixilon.kotlinglm.vec3.Vec3
 import de.bixilon.kotlinglm.vec3.Vec3d
 import de.bixilon.kotlinglm.vec4.Vec4d
 import de.bixilon.kotlinglm.vec4.Vec4t
-import kool.BYTES
-import kool.DoublePtr
-import kool.Ptr
+import de.bixilon.kotlinkool.BYTES
+import de.bixilon.kotlinkool.DoublePtr
+import de.bixilon.kotlinkool.Ptr
 import org.lwjgl.system.MemoryUtil.memGetDouble
 import org.lwjgl.system.MemoryUtil.memPutDouble
 import java.io.PrintStream

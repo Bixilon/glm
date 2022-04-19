@@ -10,9 +10,9 @@ This is the Kotlin port of [OpenGL Mathematics](http://glm.g-truc.net/) (*GLM*),
 
 This project isn't limited to *GLSL* features. An extension system, based on the *GLSL* extension conventions, provides extended capabilities: matrix transformations, quaternions, data packing, random numbers, noise, etc...
 
-This library works perfectly with *[OpenGL](https://www.opengl.org)* but it also ensures interoperability with other third party libraries and SDK. It is a good candidate for software rendering (raytracing / rasterisation), image processing, physic simulations and any development context that requires a simple and convenient mathematics library.
+This library works perfectly with *[OpenGL](https://www.opengl.org)*, but it also ensures interoperability with other third party libraries and SDK. It is a good candidate for software rendering (raytracing / rasterisation), image processing, physic simulations and any development context that requires a simple and convenient mathematics library.
 
-*GLM* is written entirely in Kotlin, but can be also used from Java. It is a platform independent library with no dependences other than [kotlin-unsigned](https://github.com/elect86/kotlin-unsigned) for unsigned support and [kotlin-test](https://github.com/kotlintest/kotlintest) for testing.
+*GLM* is written entirely in Kotlin, but can be also used from Java. It is a platform independent library with no dependencies other than [kotlin-unsigned](https://github.com/elect86/kotlin-unsigned) for unsigned support and [kotlin-test](https://github.com/kotlintest/kotlintest) for testing.
 
 For more information about *GLM*, please have a look at the [manual](https://github.com/kotlin-graphics/glm/wiki) and the original [API reference documentation](http://glm.g-truc.net/0.9.8/api/index.html).
 The source code and the documentation are licensed under both the [Happy Bunny License (Modified MIT) or the MIT License](https://github.com/kotlin-graphics/glm/wiki/Manual#section0).
@@ -45,17 +45,15 @@ fun camera(translate: Float, rotate: Vec2): Mat4 {
 <dependency>
     <groupId>de.bixilon</groupId>
     <artifactId>kotlin-glm</artifactId>
-    <version>0.9.9.1-5</version>
+    <version>0.9.9.1-6</version>
 </dependency>
 ```
 
 ### Gradle
 
 ```groovy
-implementation 'de.bixilon:kotlin-glm:0.9.9.1-5'
+implementation 'de.bixilon:kotlin-glm:0.9.9.1-6'
 ```
 
 ### Additional dependencies
 If you plan to use unsigned primitives add [kotlin-unsigned](https://github.com/kotlin-graphics/kotlin-unsigned)
-
-If you plan to use lwjgl and buffers, add lwjgl and [kool](https://github.com/kotlin-graphics/kool)

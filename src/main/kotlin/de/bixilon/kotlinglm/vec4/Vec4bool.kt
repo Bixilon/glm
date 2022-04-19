@@ -3,7 +3,7 @@ package de.bixilon.kotlinglm.vec4
 import de.bixilon.kotlinglm.bool
 import de.bixilon.kotlinglm.GLM
 import de.bixilon.kotlinglm.vec4.operators.op_Vec4bool
-import kool.pos
+import de.bixilon.kotlinkool.pos
 import java.io.PrintStream
 import java.nio.IntBuffer
 
