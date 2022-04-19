@@ -1,17 +1,30 @@
-import kx.*
-import org.lwjgl.Lwjgl
-import org.lwjgl.Lwjgl.Module.*
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    fun kx(vararg p: Pair<String, String>) = p.forEach { id("io.github.kotlin-graphics.${it.first}") version it.second }
-    kx("align" to "0.0.7",
-       "base" to "0.0.10",
-       "publish" to "0.0.6",
-       "utils" to "0.0.5")
-    id("org.lwjgl.plugin") version "0.0.20"
+    kotlin("jvm") version "1.6.20"
+}
+
+group = "de.bixilon.glm"
+version = "1.0"
+
+repositories {
+    mavenCentral()
+    maven("https://raw.githubusercontent.com/kotlin-graphics/mary/master")
 }
 
 dependencies {
-    implementation(unsigned, kool)
-    Lwjgl { implementation(glfw, jemalloc, openal, opengl, stb) }
+    testImplementation(kotlin("test"))
+    implementation("kotlin.graphics:unsigned:3.3.3")
+    implementation("kotlin.graphics:kool:0.9.1")
+
+    compileOnly(platform("org.lwjgl:lwjgl-bom:3.3.1"))
+    compileOnly("org.lwjgl", "lwjgl")
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
+
+tasks.withType<KotlinCompile> {
+    kotlinOptions.jvmTarget = "11"
 }
