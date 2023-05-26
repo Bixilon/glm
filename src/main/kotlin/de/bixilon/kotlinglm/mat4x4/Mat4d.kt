@@ -1,8 +1,10 @@
 package  de.bixilon.kotlinglm.mat4x4
 
-import de.bixilon.kotlinglm.*
+import de.bixilon.kotlinglm.GLM
 import de.bixilon.kotlinglm.GLM.inverse
 import de.bixilon.kotlinglm.GLM.transpose
+import de.bixilon.kotlinglm.ToDoubleBuffer
+import de.bixilon.kotlinglm.d
 import de.bixilon.kotlinglm.mat2x2.Mat2
 import de.bixilon.kotlinglm.mat2x2.Mat2d
 import de.bixilon.kotlinglm.mat2x2.Mat2x2t
@@ -16,6 +18,7 @@ import de.bixilon.kotlinglm.mat4x2.Mat4x2t
 import de.bixilon.kotlinglm.mat4x3.Mat4x3t
 import de.bixilon.kotlinglm.mat4x4.operators.op_Mat4d
 import de.bixilon.kotlinglm.quaternion.QuatD
+import de.bixilon.kotlinglm.toDouble
 import de.bixilon.kotlinglm.vec2.Vec2d
 import de.bixilon.kotlinglm.vec2.Vec2t
 import de.bixilon.kotlinglm.vec3.Vec3d
@@ -32,7 +35,7 @@ import java.nio.DoubleBuffer
 /**
  * Created by GBarbieri on 10.11.2016.
  */
-class Mat4d private constructor(@Suppress("UNUSED_PARAMETER") dummy: Int, var array: DoubleArray) : Mat4x4t<Double>(), ToDoubleBuffer {
+class Mat4d private constructor(@Suppress("UNUSED_PARAMETER") dummy: Int, @JvmField var array: DoubleArray) : Mat4x4t<Double>(), ToDoubleBuffer {
 
     // -- Constructors --
 
@@ -41,8 +44,8 @@ class Mat4d private constructor(@Suppress("UNUSED_PARAMETER") dummy: Int, var ar
     constructor(s: Number) : this(s, s, s, s)
 
     constructor(x: Number, y: Number, z: Number, w: Number) : this(
-            x, 0, 0, 0,
-            0, y, 0, 0,
+        x, 0, 0, 0,
+        0, y, 0, 0,
             0, 0, z, 0,
             0, 0, 0, w)
 

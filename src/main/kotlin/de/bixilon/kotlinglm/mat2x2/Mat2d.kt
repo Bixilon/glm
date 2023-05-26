@@ -25,17 +25,17 @@ import java.nio.DoubleBuffer
 /**
  * Created by GBarbieri on 10.11.2016.
  */
-class Mat2d private constructor(@Suppress("UNUSED_PARAMETER") dummy: Int, var array: DoubleArray) : Mat2x2t<Double>(), ToDoubleBuffer {
+class Mat2d private constructor(@Suppress("UNUSED_PARAMETER") dummy: Int, @JvmField var array: DoubleArray) : Mat2x2t<Double>(), ToDoubleBuffer {
 
     // -- Constructors --
 
     constructor() : this(
-            1, 0,
-            0, 1)
+        1, 0,
+        0, 1)
 
     constructor(scalar: Number) : this(
-            scalar, 0,
-            0, scalar)
+        scalar, 0,
+        0, scalar)
 
     constructor(x0: Number, y0: Number,
                 x1: Number, y1: Number) : this(0, doubleArrayOf(

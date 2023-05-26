@@ -1,6 +1,8 @@
 package de.bixilon.kotlinglm.mat2x2
 
-import de.bixilon.kotlinglm.*
+import de.bixilon.kotlinglm.GLM
+import de.bixilon.kotlinglm.ToFloatBuffer
+import de.bixilon.kotlinglm.f
 import de.bixilon.kotlinglm.mat2x2.operators.op_Mat2
 import de.bixilon.kotlinglm.mat2x3.Mat2x3t
 import de.bixilon.kotlinglm.mat2x4.Mat2x4t
@@ -12,6 +14,7 @@ import de.bixilon.kotlinglm.mat4x2.Mat4x2
 import de.bixilon.kotlinglm.mat4x2.Mat4x2t
 import de.bixilon.kotlinglm.mat4x4.Mat4
 import de.bixilon.kotlinglm.mat4x4.Mat4d
+import de.bixilon.kotlinglm.toFloat
 import de.bixilon.kotlinglm.vec2.Vec2
 import de.bixilon.kotlinglm.vec2.Vec2bool
 import de.bixilon.kotlinglm.vec2.Vec2t
@@ -28,17 +31,17 @@ import java.nio.FloatBuffer
  *
  * GLSL, column major
  */
-class Mat2 private constructor(@Suppress("UNUSED_PARAMETER") dummy: Int, var array: FloatArray) : Mat2x2t<Float>(), ToFloatBuffer {
+class Mat2 private constructor(@Suppress("UNUSED_PARAMETER") dummy: Int, @JvmField var array: FloatArray) : Mat2x2t<Float>(), ToFloatBuffer {
 
     // -- Constructors --
 
     constructor() : this(
-            1, 0,
-            0, 1)
+        1, 0,
+        0, 1)
 
     constructor(scalar: Number) : this(
-            scalar, 0,
-            0, scalar)
+        scalar, 0,
+        0, scalar)
 
     constructor(x0: Number, y0: Number,
                 x1: Number, y1: Number) : this(0, floatArrayOf(
