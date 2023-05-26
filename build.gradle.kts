@@ -1,8 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.gradle.api.publish.PublishingExtension
 
 plugins {
-    kotlin("jvm") version "1.6.20"
+    kotlin("jvm") version "1.9.0-Beta"
     `maven-publish`
     signing
 }
@@ -17,11 +16,11 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
-    testImplementation("io.kotest:kotest-runner-junit5:5.2.3")
+    testImplementation("io.kotest:kotest-runner-junit5:5.6.2")
     compileOnly("kotlin.graphics:unsigned:3.3.3")
     testImplementation("kotlin.graphics:unsigned:3.3.3")
 
-    compileOnly(platform("org.lwjgl:lwjgl-bom:3.3.1"))
+    compileOnly(platform("org.lwjgl:lwjgl-bom:3.3.2"))
     compileOnly("org.lwjgl", "lwjgl")
 
     implementation("de.bixilon:kotlin-kool:0.9.3-1")
@@ -105,8 +104,12 @@ tasks.javadoc {
     }
 }
 
-kotlin {
-    jvmToolchain {
-        (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of("11"))
-    }
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+tasks.withType<KotlinCompile> {
+    kotlinOptions.jvmTarget = "11"
+    kotlinOptions.languageVersion = "2.0"
 }
