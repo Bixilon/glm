@@ -95,6 +95,7 @@ configure<PublishingExtension> {
 }
 
 signing {
+    useGpgCmd()
     sign(publishing.publications["mavenJava"])
 }
 
