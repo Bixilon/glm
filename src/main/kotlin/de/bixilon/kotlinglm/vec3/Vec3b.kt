@@ -1,6 +1,9 @@
 package de.bixilon.kotlinglm.vec3
 
-import de.bixilon.kotlinglm.*
+import de.bixilon.kotlinglm.ToBuffer
+import de.bixilon.kotlinglm.b
+import de.bixilon.kotlinglm.i
+import de.bixilon.kotlinglm.toByte
 import de.bixilon.kotlinglm.vec1.Vec1bool
 import de.bixilon.kotlinglm.vec1.Vec1t
 import de.bixilon.kotlinglm.vec2.Vec2b
@@ -19,15 +22,15 @@ import java.nio.*
  * Created by elect on 08/10/16.
  */
 
-class Vec3b(var ofs: Int, var array: ByteArray) : Vec3t<Byte>(), ToBuffer {
+class Vec3b(@JvmField var ofs: Int, var array: ByteArray) : Vec3t<Byte>(), ToBuffer {
 
-    override var x: Byte
+    override inline var x: Byte
         get() = array[ofs]
         set(value) = array.set(ofs, value)
-    override var y: Byte
+    override inline var y: Byte
         get() = array[ofs + 1]
         set(value) = array.set(ofs + 1, value)
-    override var z: Byte
+    override inline var z: Byte
         get() = array[ofs + 2]
         set(value) = array.set(ofs + 2, value)
 

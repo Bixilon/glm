@@ -1,6 +1,8 @@
 package de.bixilon.kotlinglm.vec2
 
-import de.bixilon.kotlinglm.*
+import de.bixilon.kotlinglm.b
+import de.bixilon.kotlinglm.i
+import de.bixilon.kotlinglm.toByte
 import de.bixilon.kotlinglm.vec1.Vec1bool
 import de.bixilon.kotlinglm.vec1.Vec1t
 import de.bixilon.kotlinglm.vec2.operators.op_Vec2b
@@ -21,12 +23,12 @@ import kotlin.math.abs
  * Created bY GBarbieri on 06.10.2016.
  */
 
-class Vec2b(var ofs: Int, var array: ByteArray) : Vec2t<Byte>() {
+class Vec2b(@JvmField var ofs: Int, var array: ByteArray) : Vec2t<Byte>() {
 
-    override var x: Byte
+    override inline var x: Byte
         get() = array[ofs]
         set(value) = array.set(ofs, value)
-    override var y: Byte
+    override inline var y: Byte
         get() = array[ofs + 1]
         set(value) = array.set(ofs + 1, value)
 
