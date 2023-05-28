@@ -2,12 +2,14 @@ package de.bixilon.kotlinglm.func
 
 import de.bixilon.kotlinglm.GLM.inverseSqrt
 import de.bixilon.kotlinglm.f
+import de.bixilon.kotlinglm.toDouble
 import de.bixilon.kotlinglm.vec1.Vec1
 import de.bixilon.kotlinglm.vec1.Vec1d
 import de.bixilon.kotlinglm.vec2.Vec2
 import de.bixilon.kotlinglm.vec2.Vec2d
 import de.bixilon.kotlinglm.vec3.Vec3
 import de.bixilon.kotlinglm.vec3.Vec3d
+import de.bixilon.kotlinglm.vec3.Vec3i
 import de.bixilon.kotlinglm.vec3.Vec3t
 import de.bixilon.kotlinglm.vec4.Vec4
 import de.bixilon.kotlinglm.vec4.Vec4d
@@ -29,6 +31,7 @@ interface func_Geometric {
 
     fun length(a: Vec3) = sqrt(dot(a, a))
     fun length(a: Vec3d) = sqrt(dot(a, a))
+    fun length(a: Vec3i) = sqrt(dot(a, a).toDouble)
 
     fun length(a: Vec4) = sqrt(dot(a, a))
     fun length(a: Vec4d) = sqrt(dot(a, a))
@@ -38,6 +41,7 @@ interface func_Geometric {
 
     fun length2(a: Vec3) = a dot a
     fun length2(a: Vec3d) = a dot a
+    fun length2(a: Vec3i) = a dot a
 
     fun length2(a: Vec4) = a dot a
     fun length2(a: Vec4d) = a dot a
@@ -71,6 +75,7 @@ interface func_Geometric {
 
     fun dot(a: Vec3, b: Vec3) = a.x * b.x + a.y * b.y + a.z * b.z
     fun dot(a: Vec3d, b: Vec3d) = a.x * b.x + a.y * b.y + a.z * b.z
+    fun dot(a: Vec3i, b: Vec3i) = a.x * b.x + a.y * b.y + a.z * b.z
 
     fun dot(a: Vec3, b: Vec3t<out Number>) = a.x * b._x.f + a.y * b._y.f + a.z * b._z.f
     fun dot(a: Vec3d, b: Vec3t<out Number>) = a.x * b._x.f + a.y * b._y.f + a.z * b._z.f

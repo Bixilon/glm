@@ -299,11 +299,16 @@ class Vec2(@JvmField var ofs: Int, @JvmField var array: FloatArray) : Vec2t<Floa
     fun div(bX: Float, bY: Float, res: Vec2 = Vec2()) = div(res, this, bX, bY)
 
     fun div(b: Float, res: Vec2) = div(res, this, b, b)
+    fun div(b: Int, res: Vec2) = div(res, this, b.f, b.f)
     fun div(b: Vec2, res: Vec2) = div(res, this, b.x, b.y)
 
     fun divAssign(bX: Float, bY: Float) = div(this, this, bX, bY)
     infix operator fun divAssign(b: Float) {
         div(this, this, b, b)
+    }
+
+    infix operator fun divAssign(b: Int) {
+        div(this, this, b.f, b.f)
     }
 
     infix operator fun divAssign(b: Vec2) {

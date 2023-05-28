@@ -96,9 +96,9 @@ class Vec3i(@JvmField var ofs: Int, @JvmField var array: IntArray) : Vec3t<Int>,
     constructor(v: Vec4bool) : this(v.x.i, v.y.i, v.z.i)
 
     constructor(bytes: ByteArray, index: Int = 0, oneByteOneInt: Boolean = false, bigEndian: Boolean = true) : this(
-            if (oneByteOneInt) bytes[index].i else bytes.getInt(index, bigEndian),
-            if (oneByteOneInt) bytes[index + 1].i else bytes.getInt(index + Int.BYTES, bigEndian),
-            if (oneByteOneInt) bytes[index + 2].i else bytes.getInt(index + Int.BYTES * 2, bigEndian))
+        if (oneByteOneInt) bytes[index].i else bytes.getInt(index, bigEndian),
+        if (oneByteOneInt) bytes[index + 1].i else bytes.getInt(index + Int.BYTES, bigEndian),
+        if (oneByteOneInt) bytes[index + 2].i else bytes.getInt(index + Int.BYTES * 2, bigEndian))
 
     constructor(chars: CharArray, index: Int = 0) : this(chars[index].i, chars[index + 1].i, chars[index + 2].i)
     constructor(shorts: ShortArray, index: Int = 0) : this(shorts[index], shorts[index + 1], shorts[index + 2])
@@ -113,12 +113,12 @@ class Vec3i(@JvmField var ofs: Int, @JvmField var array: IntArray) : Vec3t<Int>,
     constructor(booleans: Array<Boolean>, index: Int = 0) : this(booleans[index].i, booleans[index + 1].i, booleans[index + 2].i)
 
     constructor(list: Iterable<*>, index: Int = 0) : this(list.elementAt(index)!!.toInt, list.elementAt(index + 1)!!.toInt,
-            list.elementAt(index + 2)!!.toInt)
+        list.elementAt(index + 2)!!.toInt)
 
     constructor(bytes: ByteBuffer, index: Int = bytes.pos, oneByteOneInt: Boolean = false) : this(
-            if (oneByteOneInt) bytes[index].i else bytes.getInt(index),
-            if (oneByteOneInt) bytes[index + 1].i else bytes.getInt(index + Int.BYTES),
-            if (oneByteOneInt) bytes[index + 2].i else bytes.getInt(index + Int.BYTES * 2))
+        if (oneByteOneInt) bytes[index].i else bytes.getInt(index),
+        if (oneByteOneInt) bytes[index + 1].i else bytes.getInt(index + Int.BYTES),
+        if (oneByteOneInt) bytes[index + 2].i else bytes.getInt(index + Int.BYTES * 2))
 
     constructor(chars: CharBuffer, index: Int = chars.pos) : this(chars[index].i, chars[index + 1].i, chars[index + 2].i)
     constructor(shorts: ShortBuffer, index: Int = shorts.pos) : this(shorts[index], shorts[index + 1], shorts[index + 2])
@@ -609,6 +609,12 @@ class Vec3i(@JvmField var ofs: Int, @JvmField var array: IntArray) : Vec3t<Int>,
     infix fun allGreaterThanEqual(v: Vec3i): Boolean = x >= v.x && y >= v.y && z >= v.z
     infix fun anyGreaterThanEqual(v: Vec3i): Boolean = x >= v.x || y >= v.y || z >= v.z
     infix fun greaterThanEqual(v: Vec3i): Vec3bool = Vec3bool { get(it) >= v[it] }
+
+
+    infix fun dot(b: Vec3i) = GLM.dot(this, b)
+
+    fun length() = GLM.length(this)
+    fun length2() = GLM.length2(this)
 
 
     companion object : op_Vec3i {
