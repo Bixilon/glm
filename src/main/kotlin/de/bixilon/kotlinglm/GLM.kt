@@ -5,14 +5,11 @@
 package de.bixilon.kotlinglm
 
 import de.bixilon.kotlinglm.ext.*
-import de.bixilon.kotlinglm.ext.ext_QuaternionCommon
-import de.bixilon.kotlinglm.ext.ext_QuaternionTransform
-import de.bixilon.kotlinglm.ext.ext_QuaternionTrigonometric
 import de.bixilon.kotlinglm.func.*
 import de.bixilon.kotlinglm.func.common.*
 import de.bixilon.kotlinglm.gtc.gtc_MatrixInverse
-import de.bixilon.kotlinglm.gtx.*
 import de.bixilon.kotlinglm.gtc.gtc_Quaternion
+import de.bixilon.kotlinglm.gtx.*
 import de.bixilon.kotlinglm.quaternion.gtx_quat
 
 object GLM :
@@ -60,7 +57,7 @@ object GLM :
 
         func_Integer,
 
-    de.bixilon.kotlinglm.Bitfield,
+    Bitfield,
 
         ColorSpace,
 
@@ -156,7 +153,7 @@ val GLM_VERSION_MAJOR = 0
 val GLM_VERSION_MINOR = 9
 val GLM_VERSION_PATCH = 9
 val GLM_VERSION_REVISION = 1
-val GLM_VERSION_BUILD = 3
+val GLM_VERSION_BUILD = 8
 val GLM_VERSION = GLM_VERSION_MAJOR * 1_000 + GLM_VERSION_MINOR * 100 + GLM_VERSION_PATCH * 10 + GLM_VERSION_REVISION
 
 /*
