@@ -8,8 +8,8 @@ import de.bixilon.kotlinglm.vec3.Vec3bool
 import de.bixilon.kotlinglm.vec3.Vec3t
 import de.bixilon.kotlinglm.vec4.Vec4bool
 import de.bixilon.kotlinglm.vec4.Vec4t
-import de.bixilon.kotlinkool.Ptr
 import de.bixilon.kotlinkool.LongBuffer
+import de.bixilon.kotlinkool.Ptr
 import de.bixilon.kotlinkool.pos
 import de.bixilon.kotlinkool.set
 import org.lwjgl.system.MemoryStack
@@ -24,7 +24,7 @@ import java.nio.*
  * Created by elect on 08/10/16.
  */
 
-class Vec1ul(x: Ulong) : Vec1t<Ulong>(x) {
+class Vec1ul(override inline var x: Ulong) : Vec1t<Ulong> {
 
     // -- Implicit basic constructors --
 
@@ -139,12 +139,6 @@ class Vec1ul(x: Ulong) : Vec1t<Ulong>(x) {
 
     infix fun to(ptr: Ptr) = memPutLong(ptr, x.v)
 
-    // -- Component accesses --
-
-    override operator fun set(index: Int, value: Ulong) = when (index) {
-        0 -> x = value
-        else -> throw ArrayIndexOutOfBoundsException()
-    }
 
     // -- Unary arithmetic operators --
 
@@ -456,7 +450,8 @@ class Vec1ul(x: Ulong) : Vec1t<Ulong>(x) {
 
 
     companion object : op_Vec1ul {
-        const val length = Vec1t.length
+        const val length = Vec1t.LENGTH
+
         @JvmField
         val size = length * Ulong.BYTES
 
@@ -477,4 +472,26 @@ class Vec1ul(x: Ulong) : Vec1t<Ulong>(x) {
 
     @JvmOverloads
     fun println(name: String = "", stream: PrintStream = System.out) = stream.println("$name$this")
+
+
+    //@formatter:off
+    override inline var _x get() = x; set(value) { x = value }
+    override inline var r get() = x; set(value) { x = value }
+    override inline var s get() = x; set(value) { x =value }
+    //@formatter:on
+
+    override inline operator fun get(index: Int): Ulong {
+        if (index == 0) return x
+        throw IndexOutOfBoundsException()
+    }
+
+    override inline operator fun set(index: Int, value: Ulong) {
+        if (index == 0) {
+            x = value
+        } else throw IndexOutOfBoundsException()
+    }
+
+    override inline fun component1() = x
+
+    override fun toString(): String = "($x)"
 }

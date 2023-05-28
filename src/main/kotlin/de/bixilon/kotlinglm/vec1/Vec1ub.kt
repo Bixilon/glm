@@ -6,10 +6,13 @@ import de.bixilon.kotlinglm.ub
 import de.bixilon.kotlinglm.vec1.operators.op_Vec1ub
 import de.bixilon.kotlinglm.vec2.Vec2bool
 import de.bixilon.kotlinglm.vec2.Vec2t
+import de.bixilon.kotlinglm.vec2.Vec2ub
 import de.bixilon.kotlinglm.vec3.Vec3bool
 import de.bixilon.kotlinglm.vec3.Vec3t
+import de.bixilon.kotlinglm.vec3.Vec3ub
 import de.bixilon.kotlinglm.vec4.Vec4bool
 import de.bixilon.kotlinglm.vec4.Vec4t
+import de.bixilon.kotlinglm.vec4.Vec4ub
 import de.bixilon.kotlinkool.pos
 import unsigned.Ubyte
 import java.nio.*
@@ -19,7 +22,7 @@ import kotlin.math.abs
  * Created by elect on 07/10/16.
  */
 
-class Vec1ub(x: Ubyte) : Vec1t<Ubyte>(x) {
+class Vec1ub(@JvmField inline var x: Ubyte) : Vec1t<Ubyte> {
 
     // -- Implicit basic constructors --
 
@@ -29,7 +32,12 @@ class Vec1ub(x: Ubyte) : Vec1t<Ubyte>(x) {
     // -- Explicit basic constructors --
     // Explicit conversions (From section 5.4.1 Conversion and scalar constructors of GLSL 1.30.08 specification)
 
-    constructor(v: Vec1t<out Number>) : this(v.x)
+    constructor(v: Vec1ub) : this(v.x)
+    constructor(v: Vec2ub) : this(v.x)
+    constructor(v: Vec3ub) : this(v.x)
+    constructor(v: Vec4ub) : this(v.x)
+
+    constructor(v: Vec1t<out Number>) : this(v._x)
     constructor(v: Vec2t<out Number>) : this(v.x)
     constructor(v: Vec3t<out Number>) : this(v.x)
     constructor(v: Vec4t<out Number>) : this(v.x)
@@ -545,7 +553,8 @@ class Vec1ub(x: Ubyte) : Vec1t<Ubyte>(x) {
 
 
     companion object : op_Vec1ub {
-        const val length = Vec1t.length
+        const val length = Vec1t.LENGTH
+
         @JvmField
         val size = length * Ubyte.BYTES
     }
@@ -557,4 +566,26 @@ class Vec1ub(x: Ubyte) : Vec1t<Ubyte>(x) {
     fun notEqual(b: Vec1ub, epsilon: Int = 0): Boolean = !equal(b, epsilon)
 
     override fun hashCode() = x.v.hashCode()
+
+
+    //@formatter:off
+    override inline var _x get() = x; set(value) { x = value }
+    override inline var r get() = x; set(value) { x = value }
+    override inline var s get() = x; set(value) { x =value }
+    //@formatter:on
+
+    override inline operator fun get(index: Int): Ubyte {
+        if (index == 0) return x
+        throw IndexOutOfBoundsException()
+    }
+
+    override inline operator fun set(index: Int, value: Ubyte) {
+        if (index == 0) {
+            x = value
+        } else throw IndexOutOfBoundsException()
+    }
+
+    override inline fun component1() = x
+
+    override fun toString(): String = "($x)"
 }
