@@ -747,7 +747,7 @@ class Vec3ub(@JvmField var ofs: Int, var array: UbyteArray) : Vec3t<Ubyte>, ToBu
 
     override inline operator fun get(index: Int) = array[ofs + index]
 
-    override inline operator fun set(index: Int, value: Ubyte) {
+    inline operator fun set(index: Int, value: Ubyte) {
         array[ofs + index] = value
     }
 
