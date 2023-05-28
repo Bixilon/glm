@@ -1,6 +1,8 @@
 package  de.bixilon.kotlinglm.mat2x4
 
-import de.bixilon.kotlinglm.*
+import de.bixilon.kotlinglm.ToFloatBuffer
+import de.bixilon.kotlinglm.f
+import de.bixilon.kotlinglm.toFloat
 import de.bixilon.kotlinglm.vec4.Vec4
 import de.bixilon.kotlinglm.vec4.Vec4t
 import de.bixilon.kotlinkool.BYTES
@@ -24,10 +26,10 @@ class Mat2x4(var array: FloatArray) : Mat2x4t<Float>(), ToFloatBuffer {
     override operator fun set(column: Int, row: Int, value: Float) = array.set(column * 4 + row, value)
 
     override operator fun set(index: Int, value: Vec4t<out Number>) {
-        array[index * 4] = value.x.f
-        array[index * 4 + 1] = value.y.f
-        array[index * 4 + 2] = value.z.f
-        array[index * 4 + 2] = value.w.f
+        array[index * 4] = value._x.f
+        array[index * 4 + 1] = value._y.f
+        array[index * 4 + 2] = value._z.f
+        array[index * 4 + 2] = value._w.f
     }
 
     operator fun set(i: Int, v: Vec4) {

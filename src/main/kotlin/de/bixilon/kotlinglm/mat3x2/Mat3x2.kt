@@ -1,6 +1,8 @@
 package  de.bixilon.kotlinglm.mat3x2
 
-import de.bixilon.kotlinglm.*
+import de.bixilon.kotlinglm.ToFloatBuffer
+import de.bixilon.kotlinglm.f
+import de.bixilon.kotlinglm.toFloat
 import de.bixilon.kotlinglm.vec2.Vec2
 import de.bixilon.kotlinglm.vec2.Vec2t
 import de.bixilon.kotlinkool.BYTES
@@ -26,8 +28,8 @@ class Mat3x2(var array: FloatArray) : Mat3x2t<Float>(), ToFloatBuffer {
     override operator fun set(column: Int, row: Int, value: Float) = array.set(column * 2 + row, value)
 
     override operator fun set(index: Int, value: Vec2t<out Number>) {
-        array[index * 2] = value.x.f
-        array[index * 2 + 1] = value.y.f
+        array[index * 2] = value._x.f
+        array[index * 2 + 1] = value._y.f
     }
 
     operator fun set(i: Int, v: Vec2) {

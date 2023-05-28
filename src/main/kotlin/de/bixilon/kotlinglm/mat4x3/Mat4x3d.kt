@@ -4,7 +4,9 @@ package  de.bixilon.kotlinglm.mat4x3
  * Created by GBarbieri on 09.12.2016.
  */
 
-import de.bixilon.kotlinglm.*
+import de.bixilon.kotlinglm.ToDoubleBuffer
+import de.bixilon.kotlinglm.d
+import de.bixilon.kotlinglm.toDouble
 import de.bixilon.kotlinglm.vec3.Vec3d
 import de.bixilon.kotlinglm.vec3.Vec3t
 import de.bixilon.kotlinkool.BYTES
@@ -25,9 +27,9 @@ class Mat4x3d(var array: DoubleArray) : Mat4x3t<Double>(), ToDoubleBuffer {
     override operator fun set(column: Int, row: Int, value: Double) = array.set(column * 3 + row, value)
 
     override operator fun set(index: Int, value: Vec3t<out Number>) {
-        array[index * 3] = value.x.d
-        array[index * 3 + 1] = value.y.d
-        array[index * 3 + 2] = value.z.d
+        array[index * 3] = value._x.d
+        array[index * 3 + 1] = value._y.d
+        array[index * 3 + 2] = value._z.d
     }
 
     operator fun set(i: Int, v: Vec3d) {

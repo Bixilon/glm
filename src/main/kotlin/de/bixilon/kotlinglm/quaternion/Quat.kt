@@ -1,10 +1,10 @@
 package de.bixilon.kotlinglm.quaternion
 
-import de.bixilon.kotlinglm.f
-import de.bixilon.kotlinglm.float
 import de.bixilon.kotlinglm.GLM
 import de.bixilon.kotlinglm.GLM.cos
 import de.bixilon.kotlinglm.GLM.sin
+import de.bixilon.kotlinglm.f
+import de.bixilon.kotlinglm.float
 import de.bixilon.kotlinglm.gtc.gtc_Quaternion
 import de.bixilon.kotlinglm.mat3x3.Mat3
 import de.bixilon.kotlinglm.mat4x4.Mat4
@@ -92,7 +92,7 @@ class Quat(w: Float, x: Float, y: Float, z: Float) : QuatT<Float>(w, x, y, z) {
 
     constructor(q: QuatD) : this(q.w.f, q.x.f, q.y.f, q.z.f)
     constructor(w: Number, x: Number, y: Number, z: Number) : this(w.f, x.f, y.f, z.f)
-    constructor(vec4: Vec4t<*>) : this(vec4.w.f, vec4.x.f, vec4.y.f, vec4.z.f)
+    constructor(vec4: Vec4t<*>) : this(vec4._w.f, vec4._x.f, vec4._y.f, vec4._z.f)
 
 
     fun put(w: Float, x: Float, y: Float, z: Float): Quat {

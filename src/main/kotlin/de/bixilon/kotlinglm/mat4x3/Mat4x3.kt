@@ -4,7 +4,9 @@ package  de.bixilon.kotlinglm.mat4x3
  * Created by GBarbieri on 09.12.2016.
  */
 
-import de.bixilon.kotlinglm.*
+import de.bixilon.kotlinglm.ToFloatBuffer
+import de.bixilon.kotlinglm.f
+import de.bixilon.kotlinglm.toFloat
 import de.bixilon.kotlinglm.vec3.Vec3
 import de.bixilon.kotlinglm.vec3.Vec3t
 import de.bixilon.kotlinkool.BYTES
@@ -25,9 +27,9 @@ class Mat4x3(var array: FloatArray) : Mat4x3t<Float>(), ToFloatBuffer {
     override operator fun set(column: Int, row: Int, value: Float) = array.set(column * 3 + row, value)
 
     override operator fun set(index: Int, value: Vec3t<out Number>) {
-        array[index * 3] = value.x.f
-        array[index * 3 + 1] = value.y.f
-        array[index * 3 + 2] = value.z.f
+        array[index * 3] = value._x.f
+        array[index * 3 + 1] = value._y.f
+        array[index * 3 + 2] = value._z.f
     }
 
     operator fun set(i: Int, v: Vec3) {
