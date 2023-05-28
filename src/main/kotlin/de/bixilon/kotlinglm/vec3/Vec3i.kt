@@ -602,7 +602,8 @@ class Vec3i(@JvmField var ofs: Int, @JvmField var array: IntArray) : Vec3t<Int>(
 
 
     companion object : op_Vec3i {
-        const val length = Vec3t.length
+        const val length = Vec3t.LENGTH
+
         @JvmField
         val size = length * Int.BYTES
 
