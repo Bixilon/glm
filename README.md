@@ -26,7 +26,6 @@ import de.bixilon.kotlinglm.mat4x4.Mat4
 import de.bixilon.kotlinglm.GLM
 
 fun camera(translate: Float, rotate: Vec2): Mat4 {
-
     val projection = GLM.perspective(GLM.PIf * 0.25f, 4.0f / 3.0f, 0.1f, 100.0f)
     var view = GLM.translate(Mat4(1.0f), Vec3(0.0f, 0.0f, -translate))
     view = GLM.rotate(view, rotate.y, Vec3(-1.0f, 0.0f, 0.0f))
@@ -56,4 +55,13 @@ implementation 'de.bixilon:kotlin-glm:0.9.9.1-6'
 ```
 
 ### Additional dependencies
+
 If you plan to use unsigned primitives add [kotlin-unsigned](https://github.com/kotlin-graphics/kotlin-unsigned)
+
+## Differences to kotlin-graphics/glm
+
+- All classes in a proper namespace
+- VecNt<*> is an interface instead of an abstract class (less memory allocation needed; faster)
+- inlining a lot of functions (Far less memory allocation; a lot faster)
+- don't require lwjgl (only a build dependency)
+- get it easily from maven central without adding any additional repositories
