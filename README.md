@@ -44,14 +44,14 @@ fun camera(translate: Float, rotate: Vec2): Mat4 {
 <dependency>
     <groupId>de.bixilon</groupId>
     <artifactId>kotlin-glm</artifactId>
-    <version>0.9.9.1-9</version>
+    <version>0.9.9.1-10</version>
 </dependency>
 ```
 
 ### Gradle
 
 ```groovy
-implementation 'de.bixilon:kotlin-glm:0.9.9.1-9'
+implementation 'de.bixilon:kotlin-glm:0.9.9.1-10'
 ```
 
 ### Additional dependencies
