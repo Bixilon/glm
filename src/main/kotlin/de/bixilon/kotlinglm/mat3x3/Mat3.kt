@@ -42,33 +42,58 @@ class Mat3 private constructor(@Suppress("UNUSED_PARAMETER") dummy: Int, @JvmFie
     constructor() : this(1)
 
     constructor(s: Number) : this(s, s, s)
+    constructor(s: Float) : this(s, s, s)
 
     constructor(x: Number, y: Number, z: Number) : this(
-            x, 0, 0,
-            0, y, 0,
-            0, 0, z)
+        x, 0, 0,
+        0, y, 0,
+        0, 0, z
+    )
+
+    constructor(x: Float, y: Float, z: Float) : this(
+        x, 0f, 0f,
+        0f, y, 0f,
+        0f, 0f, z
+    )
 
     constructor(v: Vec2t<*>) : this(v._x, v._y, 0)
     constructor(v: Vec2t<*>, z: Number) : this(v._x, v._y, z)
     constructor(v: Vec3t<*>) : this(v._x, v._y, v._z)
     constructor(v: Vec4t<*>) : this(v._x, v._y, v._z)
 
-    constructor(x0: Number, y0: Number, z0: Number,
-                x1: Number, y1: Number, z1: Number,
-                x2: Number, y2: Number, z2: Number) : this(0, floatArrayOf(
-            x0.f, y0.f, z0.f,
-            x1.f, y1.f, z1.f,
-            x2.f, y2.f, z2.f))
+    constructor(
+        x0: Number, y0: Number, z0: Number,
+        x1: Number, y1: Number, z1: Number,
+        x2: Number, y2: Number, z2: Number
+    ) : this(
+        x0.f, y0.f, z0.f,
+        x1.f, y1.f, z1.f,
+        x2.f, y2.f, z2.f
+    )
+
+    constructor(
+        x0: Float, y0: Float, z0: Float,
+        x1: Float, y1: Float, z1: Float,
+        x2: Float, y2: Float, z2: Float
+    ) : this(
+        0, floatArrayOf(
+            x0, y0, z0,
+            x1, y1, z1,
+            x2, y2, z2
+        )
+    )
 
     constructor(v0: Vec3t<out Number>, v1: Vec3t<out Number>, v2: Vec3t<out Number>) : this(
-            v0._x, v0._y, v0._z,
-            v1._x, v1._y, v1._z,
-            v2._x, v2._y, v2._z)
+        v0._x, v0._y, v0._z,
+        v1._x, v1._y, v1._z,
+        v2._x, v2._y, v2._z
+    )
 
     constructor(block: (Int) -> Number) : this(
-            block(0).f, block(1).f, block(2).f,
-            block(3).f, block(4).f, block(5).f,
-            block(6).f, block(7).f, block(8).f)
+        block(0).f, block(1).f, block(2).f,
+        block(3).f, block(4).f, block(5).f,
+        block(6).f, block(7).f, block(8).f
+    )
 
     constructor(block: (Int, Int) -> Number) : this(
             block(0, 0).f, block(0, 1).f, block(0, 2).f,
@@ -176,11 +201,11 @@ class Mat3 private constructor(@Suppress("UNUSED_PARAMETER") dummy: Int, @JvmFie
 
     // -- Accesses --
 
-    override operator fun get(index: Int) = Vec3(index * 3, array)
-    override operator fun get(column: Int, row: Int) = array[column * 3 + row]
+    override inline operator fun get(index: Int) = Vec3(index * 3, array)
+    override inline operator fun get(column: Int, row: Int) = array[column * 3 + row]
 
-    override operator fun set(column: Int, row: Int, value: Float) = array.set(column * 3 + row, value)
-    override operator fun set(index: Int, value: Vec3t<out Number>) {
+    override inline operator fun set(column: Int, row: Int, value: Float) = array.set(column * 3 + row, value)
+    override inline operator fun set(index: Int, value: Vec3t<out Number>) {
         array[index * 3] = value._x.f
         array[index * 3 + 1] = value._y.f
         array[index * 3 + 2] = value._z.f

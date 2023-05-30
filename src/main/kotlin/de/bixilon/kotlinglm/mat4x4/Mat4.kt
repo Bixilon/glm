@@ -587,12 +587,12 @@ class Mat4 private constructor(@Suppress("UNUSED_PARAMETER") dummy: Int, @JvmFie
 
     // -- Accesses --
 
-    override operator fun get(index: Int) = Vec4(index * 4, array)
-    override operator fun get(column: Int, row: Int) = array[column * 4 + row]
+    override inline operator fun get(index: Int) = Vec4(index * 4, array)
+    override inline operator fun get(column: Int, row: Int) = array[column * 4 + row]
 
-    override operator fun set(column: Int, row: Int, value: Float) = array.set(column * 4 + row, value)
+    override inline operator fun set(column: Int, row: Int, value: Float) = array.set(column * 4 + row, value)
 
-    override operator fun set(index: Int, value: Vec4t<out Number>) {
+    override inline operator fun set(index: Int, value: Vec4t<out Number>) {
         array[index * 4] = value._x.f
         array[index * 4 + 1] = value._y.f
         array[index * 4 + 2] = value._z.f
