@@ -65,3 +65,4 @@ If you plan to use unsigned primitives add [kotlin-unsigned](https://github.com/
 - inlining a lot of functions (Far less memory allocation; a lot faster)
 - don't require lwjgl (only a build dependency)
 - get it easily from maven central without adding any additional repositories
+- use primitives over wrapped classes
