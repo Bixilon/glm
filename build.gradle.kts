@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "de.bixilon.kotlin-glm"
-version = "0.9.9.1-8"
+version = "0.9.9.1-9"
 
 repositories {
     mavenCentral()
@@ -89,8 +89,8 @@ configure<PublishingExtension> {
                 password = project.properties["NEXUS_PASSWORD"].toString()
             }
 
-            url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
-            // url = uri("https://s01.oss.sonatype.org/content/repositories/releases/")
+            //url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+            url = uri("https://s01.oss.sonatype.org/content/repositories/releases/")
         }
     }
 }
