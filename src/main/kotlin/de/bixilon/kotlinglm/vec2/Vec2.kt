@@ -41,6 +41,7 @@ class Vec2(@JvmField var ofs: Int, @JvmField var array: FloatArray) : Vec2t<Floa
 
     @JvmOverloads
     constructor(x: Float, y: Float = x) : this(0, floatArrayOf(x, y))
+    constructor(x: Double, y: Double = x) : this(x.toFloat(), y.toFloat())
 
     // -- Conversion constructors --
 

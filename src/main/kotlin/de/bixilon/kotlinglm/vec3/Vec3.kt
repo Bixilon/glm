@@ -45,6 +45,7 @@ class Vec3(@JvmField var ofs: Int, @JvmField var array: FloatArray) : Vec3t<Floa
 
     @JvmOverloads
     constructor(x: Float, y: Float = x, z: Float = x) : this(0, floatArrayOf(x, y, z))
+    constructor(x: Int, y: Int = x, z: Int = x) : this(x.toFloat(), y.toFloat(), z.toFloat())
 
     // -- Conversion scalar constructors --
 
