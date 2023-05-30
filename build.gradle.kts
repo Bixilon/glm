@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "de.bixilon.kotlin-glm"
-version = "0.9.9.1-10"
+version = "0.9.9.1-11"
 
 repositories {
     mavenCentral()
