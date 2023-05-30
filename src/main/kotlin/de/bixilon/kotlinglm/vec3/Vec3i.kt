@@ -43,7 +43,7 @@ class Vec3i(@JvmField var ofs: Int, @JvmField var array: IntArray) : Vec3t<Int>,
     // -- Explicit basic constructors --
 
     @JvmOverloads
-    constructor(x: Int, y: Int = x, z: Int = x) : this(0, intArrayOf(x.i, y.i, z.i))
+    constructor(x: Int, y: Int = x, z: Int = x) : this(0, intArrayOf(x, y, z))
 
     // -- Conversion scalar constructors --
 
