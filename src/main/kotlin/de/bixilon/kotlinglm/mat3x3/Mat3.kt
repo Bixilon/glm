@@ -89,6 +89,12 @@ class Mat3 private constructor(@Suppress("UNUSED_PARAMETER") dummy: Int, @JvmFie
         v2._x, v2._y, v2._z
     )
 
+    constructor(v0: Vec3, v1: Vec3, v2: Vec3) : this(
+        v0._x, v0._y, v0._z,
+        v1._x, v1._y, v1._z,
+        v2._x, v2._y, v2._z
+    )
+
     constructor(block: (Int) -> Number) : this(
         block(0).f, block(1).f, block(2).f,
         block(3).f, block(4).f, block(5).f,
@@ -96,8 +102,8 @@ class Mat3 private constructor(@Suppress("UNUSED_PARAMETER") dummy: Int, @JvmFie
     )
 
     constructor(block: (Int, Int) -> Number) : this(
-            block(0, 0).f, block(0, 1).f, block(0, 2).f,
-            block(1, 0).f, block(1, 1).f, block(1, 2).f,
+        block(0, 0).f, block(0, 1).f, block(0, 2).f,
+        block(1, 0).f, block(1, 1).f, block(1, 2).f,
             block(2, 0).f, block(2, 1).f, block(2, 2).f)
 
     constructor(list: Iterable<*>, index: Int = 0) : this(

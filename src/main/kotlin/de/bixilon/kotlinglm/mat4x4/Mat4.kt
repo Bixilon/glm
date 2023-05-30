@@ -61,10 +61,11 @@ class Mat4 private constructor(@Suppress("UNUSED_PARAMETER") dummy: Int, @JvmFie
      * Creates a matrix with the diagonal set to [x], [y], [z] and [w]:
      */
     constructor(x: Float, y: Float, z: Float, w: Float) : this(
-            x, 0, 0, 0,
-            0, y, 0, 0,
-            0, 0, z, 0,
-            0, 0, 0, w)
+        x, 0f, 0f, 0f,
+        0f, y, 0f, 0f,
+        0f, 0f, z, 0f,
+        0f, 0f, 0f, w
+    )
 
     /**
      * Creates a matrix with the diagonal set to [x], [y], [z] and [w]:
