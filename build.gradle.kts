@@ -17,8 +17,8 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     testImplementation("io.kotest:kotest-runner-junit5:5.6.2")
-    compileOnly("kotlin.graphics:unsigned:3.3.3")
-    testImplementation("kotlin.graphics:unsigned:3.3.3")
+    compileOnly("kotlin.graphics:unsigned:3.3.32")
+    testImplementation("kotlin.graphics:unsigned:3.3.32")
 
     compileOnly(platform("org.lwjgl:lwjgl-bom:3.3.2"))
     compileOnly("org.lwjgl", "lwjgl")
@@ -109,9 +109,4 @@ tasks.javadoc {
 java {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
-}
-
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "11"
-    // kotlinOptions.languageVersion = "2.0"
 }
