@@ -45,6 +45,12 @@ class Vec3i(@JvmField var ofs: Int, @JvmField var array: IntArray) : Vec3t<Int>,
     @JvmOverloads
     constructor(x: Int, y: Int = x, z: Int = x) : this(0, intArrayOf(x, y, z))
 
+    @JvmOverloads
+    constructor(x: Float, y: Float = x, z: Float = x) : this(x.i, y.i, z.i)
+
+    @JvmOverloads
+    constructor(x: Double, y: Double = x, z: Double = x) : this(x.i, y.i, z.i)
+
     // -- Conversion scalar constructors --
 
     constructor(v: Vec1t<out Number>) : this(v._x.i)
