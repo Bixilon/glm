@@ -24,7 +24,7 @@ class Vec1ui(@JvmField inline var x: Uint) : Vec1t<Uint> {
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0)
+    constructor() : this(0.ui)
     constructor(v: Number) : this(v.ui)
 
     // -- Explicit basic constructors --

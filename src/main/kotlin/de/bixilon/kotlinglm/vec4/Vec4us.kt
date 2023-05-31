@@ -52,7 +52,7 @@ class Vec4us(@JvmField var ofs: Int, var array: UshortArray) : Vec4t<Ushort>, To
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0)
+    constructor() : this(0.us)
     constructor(v: Vec4us) : this(v.x, v.y, v.z, v.w)
     constructor(v: Vec3us) : this(v.x, v.y, v.z, Ushort(0))
     constructor(v: Vec2us) : this(v.x, v.y, Ushort(0), Ushort(0))

@@ -41,7 +41,7 @@ class Vec4(@JvmField var ofs: Int, @JvmField var array: FloatArray) : Vec4t<Floa
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0)
+    constructor() : this(0.0f, 0.0f, 0.0f, 0.0f)
     constructor(v: Vec4) : this(v.x, v.y, v.z, v.w)
     constructor(v: Vec3) : this(v.x, v.y, v.z, 0f)
     constructor(v: Vec2) : this(v.x, v.y, 0f, 0f)

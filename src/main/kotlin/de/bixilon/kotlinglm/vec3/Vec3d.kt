@@ -38,7 +38,7 @@ class Vec3d(@JvmField var ofs: Int, @JvmField var array: DoubleArray) : Vec3t<Do
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0, 0, 0)
+    constructor() : this(0.0, 0.0, 0.0)
     constructor(v: Vec3d) : this(v.x, v.y, v.z)
     constructor(v: Vec2d) : this(v.x, v.y, 0.0)
 

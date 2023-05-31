@@ -38,7 +38,7 @@ class Vec3(@JvmField var ofs: Int, @JvmField var array: FloatArray) : Vec3t<Floa
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0, 0, 0)
+    constructor() : this(0.0f, 0.0f, 0.0f)
     constructor(v: Vec3) : this(v.x, v.y, v.z)
 
     // -- Explicit basic constructors --

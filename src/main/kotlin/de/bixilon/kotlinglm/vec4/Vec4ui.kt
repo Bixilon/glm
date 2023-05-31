@@ -53,7 +53,7 @@ class Vec4ui(@JvmField var ofs: Int, var array: UintArray) : Vec4t<Uint>, ToBuff
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0)
+    constructor() : this(0.ui)
     constructor(v: Vec4ui) : this(v.x, v.y, v.z, v.w)
     constructor(v: Vec3ui) : this(v.x, v.y, v.z, Uint(0))
     constructor(v: Vec2ui) : this(v.x, v.y, Uint(0), Uint(0))

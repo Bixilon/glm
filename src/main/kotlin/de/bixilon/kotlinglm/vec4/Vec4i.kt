@@ -39,7 +39,7 @@ class Vec4i(@JvmField var ofs: Int, @JvmField var array: IntArray) : Vec4t<Int>,
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0)
+    constructor() : this(0, 0, 0, 0)
     constructor(v: Vec4i) : this(v.x, v.y, v.z, v.w)
     constructor(v: Vec3i) : this(v.x, v.y, v.z, 0)
     constructor(v: Vec2i) : this(v.x, v.y, 0, 0)

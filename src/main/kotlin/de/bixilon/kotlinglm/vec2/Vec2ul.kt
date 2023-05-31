@@ -40,7 +40,7 @@ class Vec2ul(@JvmField var ofs: Int, var array: UlongArray) : Vec2t<Ulong>, ToBu
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0)
+    constructor() : this(0.ul)
     constructor(v: Vec2ul) : this(v.x, v.y)
 
     // -- Explicit basic constructors --

@@ -40,7 +40,7 @@ class Vec2ui(@JvmField var ofs: Int, var array: UintArray) : Vec2t<Uint>, ToBuff
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0)
+    constructor() : this(0.ui)
     constructor(v: Vec2ui) : this(v.x, v.y)
 
     // -- Explicit basic constructors --

@@ -34,7 +34,7 @@ class Vec2i(@JvmField var ofs: Int, @JvmField var array: IntArray) : Vec2t<Int> 
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0)
+    constructor() : this(0, 0)
     constructor(v: Vec2i) : this(v.x, v.y)
 
     // -- Explicit basic constructors --

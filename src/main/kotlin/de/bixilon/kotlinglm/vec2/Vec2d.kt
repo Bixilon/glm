@@ -35,7 +35,7 @@ class Vec2d(@JvmField var ofs: Int, @JvmField var array: DoubleArray) : Vec2t<Do
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0)
+    constructor() : this(0.0)
     constructor(v: Vec2d) : this(v.x, v.y)
 
     // -- Explicit basic constructors --

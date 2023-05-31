@@ -40,7 +40,7 @@ class Vec2us(@JvmField var ofs: Int, var array: UshortArray) : Vec2t<Ushort>, To
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0)
+    constructor() : this(0.us)
     constructor(v: Vec2us) : this(v.x, v.y)
 
     // -- Explicit basic constructors --

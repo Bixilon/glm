@@ -53,7 +53,7 @@ class Vec4ul(@JvmField var ofs: Int, var array: UlongArray) : Vec4t<Ulong>, ToBu
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0)
+    constructor() : this(0.ul)
     constructor(v: Vec4ul) : this(v.x, v.y, v.z, v.w)
     constructor(v: Vec3ul) : this(v.x, v.y, v.z, Ulong(0))
     constructor(v: Vec2ul) : this(v.x, v.y, Ulong(0), Ulong(0))

@@ -34,7 +34,7 @@ class Vec2(@JvmField var ofs: Int, @JvmField var array: FloatArray) : Vec2t<Floa
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0, 0)
+    constructor() : this(0.0f, 0.0f)
     constructor(v: Vec2) : this(v.x, v.y)
 
     // -- Explicit basic constructors --

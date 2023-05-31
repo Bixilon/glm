@@ -42,7 +42,7 @@ class Vec2ub(@JvmField var ofs: Int, var array: UbyteArray) : Vec2t<Ubyte>, ToBu
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0)
+    constructor() : this(0.ub)
     constructor(v: Vec2ub) : this(v.x, v.y)
 
     // -- Explicit basic constructors --

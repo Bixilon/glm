@@ -22,7 +22,7 @@ class Vec1l(@JvmField inline var x: Long) : Vec1t<Long> {
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0)
+    constructor() : this(0L)
     constructor(s: Number) : this(s.L)
 
     // -- Explicit basic constructors --

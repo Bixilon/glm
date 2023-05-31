@@ -28,7 +28,7 @@ class Vec1ul(@JvmField inline var x: Ulong) : Vec1t<Ulong> {
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0)
+    constructor() : this(0.ul)
     constructor(s: Number) : this(s.ul)
 
     // -- Explicit basic constructors --

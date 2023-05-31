@@ -49,7 +49,7 @@ class Vec3ub(@JvmField var ofs: Int, var array: UbyteArray) : Vec3t<Ubyte>, ToBu
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0, 0, 0)
+    constructor() : this(0.ub, 0.ub, 0.ub)
     constructor(v: Vec3ub) : this(v.x, v.y, v.z)
     constructor(v: Vec2ub) : this(v.x, v.y, Ubyte(0))
 

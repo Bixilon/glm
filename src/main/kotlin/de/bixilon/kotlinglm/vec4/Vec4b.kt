@@ -41,7 +41,7 @@ class Vec4b(@JvmField var ofs: Int, @JvmField var array: ByteArray) : Vec4t<Byte
 
     // -- Implicit basic constructors --
 
-    constructor() : this(0)
+    constructor() : this(0.b)
     constructor(v: Vec4b) : this(v.x, v.y, v.z, v.w)
     constructor(v: Vec3b) : this(v.x, v.y, v.z, 0)
     constructor(v: Vec2b) : this(v.x, v.y, 0, 0)
