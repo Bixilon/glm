@@ -2,6 +2,7 @@
 
 [![license](https://img.shields.io/badge/License-MIT-orange.svg)](https://github.com/kotlin-graphics/glm/blob/master/LICENSE) 
 
+# Attention: This project is no longer maintained. Almost all changes are implemented upstream, please use the upstream version. See their readme for instructions. 
 This is a fork of [kotlin-graphics/glm](https://github.com/kotlin-graphics/glm)
 
 This is the Kotlin port of [OpenGL Mathematics](http://glm.g-truc.net/) (*GLM*), written by [g-truc](https://github.com/Groovounet) ([repository](https://github.com/g-truc/glm)), a header only C++ mathematics library for graphics software based on the [OpenGL Shading Language (GLSL) specifications](https://www.opengl.org/registry/doc/GLSLangSpec.4.50.diff.pdf).
